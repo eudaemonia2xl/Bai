@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  BaiSiJie
+//
+//  Created by senyint on 2017/7/11.
+//  Copyright © 2017年 郑雪利. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+BSView.h"
+
+#endif /* PrefixHeader_pch */

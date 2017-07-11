@@ -40,15 +40,18 @@
     //注意：设置center属性是时相对于父视图的，跟布局里的center概念不一样
 //    self.publishBtn.center = CGPointMake(self.center.x, self.center.y);
 //    NSLog(@"%f  %f",self.center.x,self.center.y);
-    self.publishBtn.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+    self.publishBtn.center = CGPointMake(self.width * 0.5, self.height * 0.5);
     
     NSInteger index = 0;
     
     CGFloat viewY = 0;
-    CGFloat viewW = self.frame.size.width * 0.2;
-    CGFloat viewH = self.frame.size.height;
+    CGFloat viewW = self.width * 0.2;
+    CGFloat viewH = self.height;
     for (UIView *view in self.subviews) {
-        if (![view isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+//        if (![view isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+//            continue;
+//        }
+        if (![view isKindOfClass:[UIControl class]] || view == self.publishBtn) {
             continue;
         }
         //计算子控件的x时，跳过发布按钮位置，由于发布按钮与其他4个按钮在数组中的顺序不知道，所以依次设置x更麻烦，所以单独设置发布按钮的frame更简单
