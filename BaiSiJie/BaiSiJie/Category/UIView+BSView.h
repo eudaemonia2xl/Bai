@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (BSView)
+
+//size
+@property (assign, nonatomic) CGSize size;
 //宽度
 @property (nonatomic, assign) CGFloat width;
 //宽度

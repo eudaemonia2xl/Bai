@@ -16,7 +16,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"我的";
+    
+    self.navigationItem.rightBarButtonItems = @[
+    [UIBarButtonItem itemWithTarget:self action:@selector(settingClick) image:@"mine-setting-icon" selectedImage:@"mine-setting-icon-click"],
+    [UIBarButtonItem itemWithTarget:self action:@selector(moonClick) image:@"mine-moon-icon-click" selectedImage:@"mine-moon-icon-click-click"]];
+    
+    //设置背景色
+    self.view.backgroundColor = RGBColor(223, 223, 223);
+    
+    DLog(@"BSMeViewController");
+}
+
+- (void)settingClick
+{
+    DLog(@"%s",__func__);
+}
+
+- (void)moonClick
+{
+    DLog(@"%s",__func__);
 }
 
 - (void)didReceiveMemoryWarning {

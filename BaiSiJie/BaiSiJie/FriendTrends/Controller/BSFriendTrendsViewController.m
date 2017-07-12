@@ -1,22 +1,36 @@
 //
-//  BSEssenceViewController.m
+//  BSFriendTrendsViewController.m
 //  BaiSiJie
 //
 //  Created by 郑雪利 on 2017/7/10.
 //  Copyright © 2017年 郑雪利. All rights reserved.
 //
 
-#import "BSEssenceViewController.h"
+#import "BSFriendTrendsViewController.h"
 
-@interface BSEssenceViewController ()
+@interface BSFriendTrendsViewController ()
 
 @end
 
-@implementation BSEssenceViewController
+@implementation BSFriendTrendsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"我的关注";
+
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(click) image:@"friendsRecommentIcon" selectedImage:@"friendsRecommentIcon-click"];
+    
+    //设置背景色
+    self.view.backgroundColor = RGBColor(223, 223, 223);
+    
+    DLog(@"BSFriendTrendsViewController");
+
+}
+
+- (void)click
+{
+    DLog(@"%s",__func__);
 }
 
 - (void)didReceiveMemoryWarning {

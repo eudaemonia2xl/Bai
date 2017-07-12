@@ -24,6 +24,7 @@
         UIButton *publishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        publishBtn.size = publishBtn.currentBackgroundImage.size;
         [self addSubview:publishBtn];
         self.publishBtn = publishBtn;
     }
@@ -35,7 +36,8 @@
 {
     [super layoutSubviews];
     
-    self.publishBtn.bounds = CGRectMake(0, 0, self.publishBtn.currentBackgroundImage.size.width, self.publishBtn.currentBackgroundImage.size.height);
+//    self.publishBtn.bounds = CGRectMake(0, 0, self.publishBtn.currentBackgroundImage.size.width, self.publishBtn.currentBackgroundImage.size.height);(给view的分类添加过size属性后，将此句代码可以直接移到initWithFrame方法里)
+
     
     //注意：设置center属性是时相对于父视图的，跟布局里的center概念不一样
 //    self.publishBtn.center = CGPointMake(self.center.x, self.center.y);
@@ -50,7 +52,7 @@
     for (UIView *view in self.subviews) {
 //        if (![view isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
 //            continue;
-//        }
+//        } 两个if判断等价
         if (![view isKindOfClass:[UIControl class]] || view == self.publishBtn) {
             continue;
         }

@@ -11,13 +11,14 @@
 		0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E13DC0C1F0E6C7C00C81D2D /* AppDelegate.m */; };
 		0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */; };
 		0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC161F0E6C7C00C81D2D /* LaunchScreen.storyboard */; };
-		0E19B6041F13A75B00DECC68 /* BSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E19B6031F13A75B00DECC68 /* BSTabBarViewController.m */; };
-		0E19B6071F13A95400DECC68 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E19B6061F13A95400DECC68 /* BSEssenceViewController.m */; };
-		0E19B60A1F13A96700DECC68 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E19B6091F13A96700DECC68 /* BSFriendTrendsViewController.m */; };
-		0E19B60D1F13A97800DECC68 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E19B60C1F13A97800DECC68 /* BSNewViewController.m */; };
-		0E19B6101F13A98100DECC68 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E19B60F1F13A98100DECC68 /* BSMeViewController.m */; };
-		0E19B6131F13B33F00DECC68 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E19B6121F13B33F00DECC68 /* BSTabBar.m */; };
-		F43D57D31F14954300D48FE7 /* UIView+BSView.m in Sources */ = {isa = PBXBuildFile; fileRef = F43D57D21F14954300D48FE7 /* UIView+BSView.m */; };
+		0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */; };
+		0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E61F164FBF007C0D25 /* UIView+BSView.m */; };
+		0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E91F164FBF007C0D25 /* BSTabBar.m */; };
+		0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288EB1F164FBF007C0D25 /* BSTabBarViewController.m */; };
+		0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288F01F164FBF007C0D25 /* BSEssenceViewController.m */; };
+		0E2288FE1F164FBF007C0D25 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288F61F164FBF007C0D25 /* BSFriendTrendsViewController.m */; };
+		0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289021F164FD4007C0D25 /* BSMeViewController.m */; };
+		0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289081F164FD4007C0D25 /* BSNewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,21 +29,23 @@
 		0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E13DC171F0E6C7C00C81D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E13DC191F0E6C7C00C81D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E19B6021F13A75B00DECC68 /* BSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarViewController.h; sourceTree = "<group>"; };
-		0E19B6031F13A75B00DECC68 /* BSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarViewController.m; sourceTree = "<group>"; };
-		0E19B6051F13A95400DECC68 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
-		0E19B6061F13A95400DECC68 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
-		0E19B6081F13A96700DECC68 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
-		0E19B6091F13A96700DECC68 /* BSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFriendTrendsViewController.m; sourceTree = "<group>"; };
-		0E19B60B1F13A97800DECC68 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
-		0E19B60C1F13A97800DECC68 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
-		0E19B60E1F13A98100DECC68 /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
-		0E19B60F1F13A98100DECC68 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
-		0E19B6111F13B33F00DECC68 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
-		0E19B6121F13B33F00DECC68 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
-		F43D57D11F14954300D48FE7 /* UIView+BSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSView.h"; sourceTree = "<group>"; };
-		F43D57D21F14954300D48FE7 /* UIView+BSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSView.m"; sourceTree = "<group>"; };
-		F43D57D41F1496FD00D48FE7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0E2288E31F164FBF007C0D25 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
+		0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
+		0E2288E51F164FBF007C0D25 /* UIView+BSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSView.h"; sourceTree = "<group>"; };
+		0E2288E61F164FBF007C0D25 /* UIView+BSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSView.m"; sourceTree = "<group>"; };
+		0E2288E81F164FBF007C0D25 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
+		0E2288E91F164FBF007C0D25 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
+		0E2288EA1F164FBF007C0D25 /* BSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarViewController.h; sourceTree = "<group>"; };
+		0E2288EB1F164FBF007C0D25 /* BSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarViewController.m; sourceTree = "<group>"; };
+		0E2288EC1F164FBF007C0D25 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0E2288EF1F164FBF007C0D25 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
+		0E2288F01F164FBF007C0D25 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
+		0E2288F51F164FBF007C0D25 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
+		0E2288F61F164FBF007C0D25 /* BSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFriendTrendsViewController.m; sourceTree = "<group>"; };
+		0E2289011F164FD4007C0D25 /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
+		0E2289021F164FD4007C0D25 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
+		0E2289071F164FD4007C0D25 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
+		0E2289081F164FD4007C0D25 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,20 +80,12 @@
 			children = (
 				0E13DC0B1F0E6C7C00C81D2D /* AppDelegate.h */,
 				0E13DC0C1F0E6C7C00C81D2D /* AppDelegate.m */,
-				0E19B6021F13A75B00DECC68 /* BSTabBarViewController.h */,
-				0E19B6031F13A75B00DECC68 /* BSTabBarViewController.m */,
-				0E19B6051F13A95400DECC68 /* BSEssenceViewController.h */,
-				0E19B6061F13A95400DECC68 /* BSEssenceViewController.m */,
-				0E19B6081F13A96700DECC68 /* BSFriendTrendsViewController.h */,
-				0E19B6091F13A96700DECC68 /* BSFriendTrendsViewController.m */,
-				0E19B60B1F13A97800DECC68 /* BSNewViewController.h */,
-				0E19B60C1F13A97800DECC68 /* BSNewViewController.m */,
-				0E19B60E1F13A98100DECC68 /* BSMeViewController.h */,
-				0E19B60F1F13A98100DECC68 /* BSMeViewController.m */,
-				0E19B6111F13B33F00DECC68 /* BSTabBar.h */,
-				0E19B6121F13B33F00DECC68 /* BSTabBar.m */,
-				F43D57D11F14954300D48FE7 /* UIView+BSView.h */,
-				F43D57D21F14954300D48FE7 /* UIView+BSView.m */,
+				0E2288E71F164FBF007C0D25 /* Common(公共) */,
+				0E2288ED1F164FBF007C0D25 /* Essence(精华) */,
+				0E2289051F164FD4007C0D25 /* New(新帖) */,
+				0E2288F31F164FBF007C0D25 /* FriendTrends(关注) */,
+				0E2288FF1F164FD4007C0D25 /* Me(我的) */,
+				0E2288E21F164FBF007C0D25 /* Category(分类) */,
 				0E13DC081F0E6C7C00C81D2D /* Supporting Files */,
 			);
 			path = BaiSiJie;
@@ -103,9 +98,169 @@
 				0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */,
 				0E13DC161F0E6C7C00C81D2D /* LaunchScreen.storyboard */,
 				0E13DC091F0E6C7C00C81D2D /* main.m */,
-				F43D57D41F1496FD00D48FE7 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E2288E21F164FBF007C0D25 /* Category(分类) */ = {
+			isa = PBXGroup;
+			children = (
+				0E2288E31F164FBF007C0D25 /* UIBarButtonItem+BSExtension.h */,
+				0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */,
+				0E2288E51F164FBF007C0D25 /* UIView+BSView.h */,
+				0E2288E61F164FBF007C0D25 /* UIView+BSView.m */,
+			);
+			name = "Category(分类)";
+			path = Category;
+			sourceTree = "<group>";
+		};
+		0E2288E71F164FBF007C0D25 /* Common(公共) */ = {
+			isa = PBXGroup;
+			children = (
+				0E2288E81F164FBF007C0D25 /* BSTabBar.h */,
+				0E2288E91F164FBF007C0D25 /* BSTabBar.m */,
+				0E2288EA1F164FBF007C0D25 /* BSTabBarViewController.h */,
+				0E2288EB1F164FBF007C0D25 /* BSTabBarViewController.m */,
+				0E2288EC1F164FBF007C0D25 /* PrefixHeader.pch */,
+			);
+			name = "Common(公共)";
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0E2288ED1F164FBF007C0D25 /* Essence(精华) */ = {
+			isa = PBXGroup;
+			children = (
+				0E2288EE1F164FBF007C0D25 /* Controller */,
+				0E2288F11F164FBF007C0D25 /* Model */,
+				0E2288F21F164FBF007C0D25 /* View */,
+			);
+			name = "Essence(精华)";
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		0E2288EE1F164FBF007C0D25 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E2288EF1F164FBF007C0D25 /* BSEssenceViewController.h */,
+				0E2288F01F164FBF007C0D25 /* BSEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0E2288F11F164FBF007C0D25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E2288F21F164FBF007C0D25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2288F31F164FBF007C0D25 /* FriendTrends(关注) */ = {
+			isa = PBXGroup;
+			children = (
+				0E2288F41F164FBF007C0D25 /* Controller */,
+				0E2288F71F164FBF007C0D25 /* Model */,
+				0E2288F81F164FBF007C0D25 /* View */,
+			);
+			name = "FriendTrends(关注)";
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		0E2288F41F164FBF007C0D25 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E2288F51F164FBF007C0D25 /* BSFriendTrendsViewController.h */,
+				0E2288F61F164FBF007C0D25 /* BSFriendTrendsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0E2288F71F164FBF007C0D25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E2288F81F164FBF007C0D25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2288FF1F164FD4007C0D25 /* Me(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				0E2289001F164FD4007C0D25 /* Controller */,
+				0E2289031F164FD4007C0D25 /* Model */,
+				0E2289041F164FD4007C0D25 /* View */,
+			);
+			name = "Me(我的)";
+			path = Me;
+			sourceTree = "<group>";
+		};
+		0E2289001F164FD4007C0D25 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E2289011F164FD4007C0D25 /* BSMeViewController.h */,
+				0E2289021F164FD4007C0D25 /* BSMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0E2289031F164FD4007C0D25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E2289041F164FD4007C0D25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E2289051F164FD4007C0D25 /* New(新帖) */ = {
+			isa = PBXGroup;
+			children = (
+				0E2289061F164FD4007C0D25 /* Controller */,
+				0E2289091F164FD4007C0D25 /* Model */,
+				0E22890A1F164FD4007C0D25 /* View */,
+			);
+			name = "New(新帖)";
+			path = New;
+			sourceTree = "<group>";
+		};
+		0E2289061F164FD4007C0D25 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E2289071F164FD4007C0D25 /* BSNewViewController.h */,
+				0E2289081F164FD4007C0D25 /* BSNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0E2289091F164FD4007C0D25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E22890A1F164FD4007C0D25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,14 +336,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */,
+				0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */,
+				0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */,
+				0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */,
+				0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */,
+				0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */,
+				0E2288FE1F164FBF007C0D25 /* BSFriendTrendsViewController.m in Sources */,
+				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,
-				0E19B6101F13A98100DECC68 /* BSMeViewController.m in Sources */,
-				F43D57D31F14954300D48FE7 /* UIView+BSView.m in Sources */,
-				0E19B60A1F13A96700DECC68 /* BSFriendTrendsViewController.m in Sources */,
-				0E19B6071F13A95400DECC68 /* BSEssenceViewController.m in Sources */,
-				0E19B60D1F13A97800DECC68 /* BSNewViewController.m in Sources */,
-				0E19B6131F13B33F00DECC68 /* BSTabBar.m in Sources */,
-				0E19B6041F13A75B00DECC68 /* BSTabBarViewController.m in Sources */,
+				0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +459,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 2JMS7C4P53;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = BaiSiJie/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = BaiSiJie/Common/PrefixHeader.pch;
 				INFOPLIST_FILE = BaiSiJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZXL.BaiSiJie;
@@ -318,7 +474,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 2JMS7C4P53;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = BaiSiJie/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = BaiSiJie/Common/PrefixHeader.pch;
 				INFOPLIST_FILE = BaiSiJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZXL.BaiSiJie;

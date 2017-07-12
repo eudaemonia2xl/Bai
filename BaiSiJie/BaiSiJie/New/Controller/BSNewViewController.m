@@ -1,22 +1,38 @@
 //
-//  BSFriendTrendsViewController.m
+//  BSNewViewController.m
 //  BaiSiJie
 //
 //  Created by 郑雪利 on 2017/7/10.
 //  Copyright © 2017年 郑雪利. All rights reserved.
 //
 
-#import "BSFriendTrendsViewController.h"
+#import "BSNewViewController.h"
 
-@interface BSFriendTrendsViewController ()
+@interface BSNewViewController ()
 
 @end
 
-@implementation BSFriendTrendsViewController
+@implementation BSNewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //设置导航栏标题
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    
+    //设置导航栏左侧按钮
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(click) image:@"MainTagSubIcon" selectedImage:@"MainTagSubIconClick"];
+    
+    //设置背景色
+    self.view.backgroundColor = RGBColor(223, 223, 223);
+    
+    DLog(@"BSNewViewController");
+
+}
+
+- (void)click
+{
+    DLog(@"%s",__func__);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -11,6 +11,18 @@
 
 @implementation UIView (BSView)
 
+- (void)setSize:(CGSize)size
+{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
+- (CGSize)size
+{
+    return self.frame.size;
+}
+
 - (void)setWidth:(CGFloat)width
 {
     CGRect frame = self.frame;
@@ -20,7 +32,7 @@
 
 - (CGFloat)width
 {
-    return self.width;
+    return self.frame.size.width;
 }
 
 - (void)setHeight:(CGFloat)height
@@ -32,7 +44,7 @@
 
 - (CGFloat)height
 {
-    return self.height;
+    return self.frame.size.height;
 }
 
 - (void)setX:(CGFloat)x
@@ -44,7 +56,7 @@
 
 - (CGFloat)x
 {
-    return self.x;
+    return self.frame.origin.x;
 }
 
 - (void)setY:(CGFloat)y
@@ -56,8 +68,7 @@
 
 - (CGFloat)y
 {
-    return self.y;
+    return self.frame.origin.y;
 }
-
 
 @end

@@ -41,9 +41,9 @@
     
     [self setupChildViewController:[[BSNewViewController alloc] init] WithTitle:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    [self setupChildViewController:[[BSNewViewController alloc] init] WithTitle:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupChildViewController:[[BSFriendTrendsViewController alloc] init] WithTitle:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
-    [self setupChildViewController:[[BSNewViewController alloc] init] WithTitle:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupChildViewController:[[BSMeViewController alloc] init] WithTitle:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
     //tabBar是只读的属性，只能通过KVC进行赋值
     [self setValue:[[BSTabBar alloc] init] forKeyPath:@"tabBar"];
@@ -56,9 +56,10 @@
     vc.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     //添加子控制器
-    [self addChildViewController:vc];
+    [self addChildViewController:nav];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,5 +10,14 @@
 #define PrefixHeader_pch
 
 #import "UIView+BSView.h"
+#import "UIBarButtonItem+BSExtension.h"
+
+#ifdef DEBUG
+#define DLog(...) NSLog(__VA_ARGS__)
+#else
+#define DLog(...)
+#endif
+
+#define RGBColor(a,b,c) [UIColor colorWithRed:(a)/255.0 green:(a)/255.0 blue:(a)/255.0 alpha:1.0]
 
 #endif /* PrefixHeader_pch */
