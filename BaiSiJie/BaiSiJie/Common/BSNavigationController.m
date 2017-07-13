@@ -26,8 +26,6 @@
  */
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    [super pushViewController:viewController animated:animated];
-    
     if (self.childViewControllers.count > 1) {
         UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [backBtn setTitle:@"返回" forState:UIControlStateNormal];
@@ -42,6 +40,9 @@
         [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     }
+    
+    // 这句super的push要放在后面, 让viewController可以覆盖上面设置的leftBarButtonItem
+    [super pushViewController:viewController animated:animated];
     
 }
 

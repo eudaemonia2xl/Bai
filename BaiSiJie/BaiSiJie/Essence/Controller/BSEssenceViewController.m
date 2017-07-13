@@ -7,7 +7,6 @@
 //
 
 #import "BSEssenceViewController.h"
-#import "BSTestViewController.h"
 
 @interface BSEssenceViewController ()
 
@@ -32,13 +31,6 @@
 - (void)click
 {
     DLog(@"%s",__func__);
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    BSTestViewController *vc = [[BSTestViewController alloc] init];
-    vc.view.backgroundColor = [UIColor greenColor];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
