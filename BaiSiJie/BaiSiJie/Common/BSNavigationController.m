@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-//    navigationbarBackgroundWhite
 }
 
 /**
@@ -39,6 +38,8 @@
         backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+        
+        self.hidesBottomBarWhenPushed = YES;
     }
     
     // 这句super的push要放在后面, 让viewController可以覆盖上面设置的leftBarButtonItem
