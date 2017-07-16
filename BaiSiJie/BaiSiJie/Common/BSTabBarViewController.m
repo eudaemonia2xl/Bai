@@ -12,6 +12,7 @@
 #import "BSFriendTrendsViewController.h"
 #import "BSMeViewController.h"
 #import "BSTabBar.h"
+#import "BSNavigationController.h"
 
 @interface BSTabBarViewController ()
 
@@ -48,6 +49,8 @@
     //tabBar是只读的属性，只能通过KVC进行赋值
     [self setValue:[[BSTabBar alloc] init] forKeyPath:@"tabBar"];
     
+    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
+    
 }
 
 - (void)setupChildViewController:(UIViewController *)vc WithTitle:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
@@ -56,7 +59,8 @@
     vc.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    BSNavigationController *nav = [[BSNavigationController alloc] initWithRootViewController:vc];
     //添加子控制器
     [self addChildViewController:nav];
 }

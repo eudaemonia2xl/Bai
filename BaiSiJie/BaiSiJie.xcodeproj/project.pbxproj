@@ -19,6 +19,7 @@
 		0E2288FE1F164FBF007C0D25 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288F61F164FBF007C0D25 /* BSFriendTrendsViewController.m */; };
 		0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289021F164FD4007C0D25 /* BSMeViewController.m */; };
 		0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289081F164FD4007C0D25 /* BSNewViewController.m */; };
+		F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4294F0A1F17333E00BB0C2E /* BSNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		0E2289021F164FD4007C0D25 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
 		0E2289071F164FD4007C0D25 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
 		0E2289081F164FD4007C0D25 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
+		F4294F091F17333E00BB0C2E /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
+		F4294F0A1F17333E00BB0C2E /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				0E2288E91F164FBF007C0D25 /* BSTabBar.m */,
 				0E2288EA1F164FBF007C0D25 /* BSTabBarViewController.h */,
 				0E2288EB1F164FBF007C0D25 /* BSTabBarViewController.m */,
+				F4294F091F17333E00BB0C2E /* BSNavigationController.h */,
+				F4294F0A1F17333E00BB0C2E /* BSNavigationController.m */,
 				0E2288EC1F164FBF007C0D25 /* PrefixHeader.pch */,
 			);
 			name = "Common(公共)";
@@ -337,6 +342,7 @@
 			files = (
 				0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */,
 				0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */,
+				F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */,
 				0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */,
 				0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */,
 				0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */,
