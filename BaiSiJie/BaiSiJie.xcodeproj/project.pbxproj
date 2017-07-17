@@ -21,9 +21,10 @@
 		AA9C683D34C9D5AD809CD681 /* libPods-BaiSiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794295E919053EE028329934 /* libPods-BaiSiJie.a */; };
 		F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */; };
 		F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F401C7F01F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib */; };
-		F401C7F61F1C7D9C00AF6FC0 /* BSRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7F41F1C7D9C00AF6FC0 /* BSRecommendController.m */; };
-		F401C7F71F1C7D9C00AF6FC0 /* BSRecommendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F401C7F51F1C7D9C00AF6FC0 /* BSRecommendController.xib */; };
 		F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7F81F1C81A100AF6FC0 /* Foundation+Log.m */; };
+		F401C7FF1F1CB87600AF6FC0 /* BSRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7FD1F1CB87600AF6FC0 /* BSRecommendController.m */; };
+		F401C8001F1CB87600AF6FC0 /* BSRecommendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F401C7FE1F1CB87600AF6FC0 /* BSRecommendController.xib */; };
+		F401C8031F1CBA4D00AF6FC0 /* BSRecommandLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C8021F1CBA4D00AF6FC0 /* BSRecommandLeft.m */; };
 		F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4294F0A1F17333E00BB0C2E /* BSNavigationController.m */; };
 /* End PBXBuildFile section */
 
@@ -55,10 +56,12 @@
 		F401C7EE1F1C653C00AF6FC0 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
 		F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFriendTrendsViewController.m; sourceTree = "<group>"; };
 		F401C7F01F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
-		F401C7F31F1C7D9C00AF6FC0 /* BSRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendController.h; sourceTree = "<group>"; };
-		F401C7F41F1C7D9C00AF6FC0 /* BSRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendController.m; sourceTree = "<group>"; };
-		F401C7F51F1C7D9C00AF6FC0 /* BSRecommendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendController.xib; sourceTree = "<group>"; };
 		F401C7F81F1C81A100AF6FC0 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		F401C7FC1F1CB87600AF6FC0 /* BSRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendController.h; sourceTree = "<group>"; };
+		F401C7FD1F1CB87600AF6FC0 /* BSRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendController.m; sourceTree = "<group>"; };
+		F401C7FE1F1CB87600AF6FC0 /* BSRecommendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendController.xib; sourceTree = "<group>"; };
+		F401C8011F1CBA4D00AF6FC0 /* BSRecommandLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSRecommandLeft.h; path = BaiSiJie/FriendTrends/Controller/BSRecommandLeft.h; sourceTree = SOURCE_ROOT; };
+		F401C8021F1CBA4D00AF6FC0 /* BSRecommandLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSRecommandLeft.m; path = BaiSiJie/FriendTrends/Controller/BSRecommandLeft.m; sourceTree = SOURCE_ROOT; };
 		F4294F091F17333E00BB0C2E /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		F4294F0A1F17333E00BB0C2E /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
 		FC278EC2E9FA8986C2349F5E /* Pods-BaiSiJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiJie/Pods-BaiSiJie.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,9 +203,9 @@
 				F401C7EE1F1C653C00AF6FC0 /* BSFriendTrendsViewController.h */,
 				F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */,
 				F401C7F01F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib */,
-				F401C7F31F1C7D9C00AF6FC0 /* BSRecommendController.h */,
-				F401C7F41F1C7D9C00AF6FC0 /* BSRecommendController.m */,
-				F401C7F51F1C7D9C00AF6FC0 /* BSRecommendController.xib */,
+				F401C7FC1F1CB87600AF6FC0 /* BSRecommendController.h */,
+				F401C7FD1F1CB87600AF6FC0 /* BSRecommendController.m */,
+				F401C7FE1F1CB87600AF6FC0 /* BSRecommendController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +213,8 @@
 		0E2288F71F164FBF007C0D25 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F401C8011F1CBA4D00AF6FC0 /* BSRecommandLeft.h */,
+				F401C8021F1CBA4D00AF6FC0 /* BSRecommandLeft.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,8 +374,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F401C7F71F1C7D9C00AF6FC0 /* BSRecommendController.xib in Resources */,
 				F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */,
+				F401C8001F1CB87600AF6FC0 /* BSRecommendController.xib in Resources */,
 				0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */,
 				0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */,
 			);
@@ -431,11 +436,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F401C7F61F1C7D9C00AF6FC0 /* BSRecommendController.m in Sources */,
 				0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */,
 				0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */,
 				F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */,
 				0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */,
+				F401C7FF1F1CB87600AF6FC0 /* BSRecommendController.m in Sources */,
 				0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */,
 				0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */,
 				F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */,
@@ -443,6 +448,7 @@
 				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,
+				F401C8031F1CBA4D00AF6FC0 /* BSRecommandLeft.m in Sources */,
 				0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  BSRecommendViewController.m
+//  BSRecommendController.m
 //  BaiSiJie
 //
 //  Created by senyint on 2017/7/17.
@@ -7,9 +7,15 @@
 //
 
 #import "BSRecommendController.h"
-#import "AFNetworking.h"
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
 
-@interface BSRecommendController ()
+@interface BSRecommendController ()<UITableViewDelegate,UITableViewDataSource>
+
+//左侧数据源数组
+@property (nonatomic, strong) NSMutableArray *categoriesArray;
+/** 左边的类别表格 */
+@property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 
 @end
 
@@ -19,15 +25,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.navigationItem.title = @"推荐关注";
+    
     self.view.backgroundColor = RGBColor(223, 12, 240);
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
     NSDictionary *dict = @{@"a":@"category",
                            @"c":@"subscribe"};
     [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        DLog(@"%@",responseObject);
+        _categoriesArray = [NSMutableArray arrayWithArray:responseObject[@"list"]];
+        DLog(@"%@",_categoriesArray);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"%@",error);
     }];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.categoriesArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identify"];
+    return nil;
+}
+
+- (NSMutableArray *)categoriesArray
+{
+    if (_categoriesArray == nil) {
+        _categoriesArray = [NSMutableArray array];
+    }
+    return _categoriesArray;
 }
 
 - (void)didReceiveMemoryWarning {

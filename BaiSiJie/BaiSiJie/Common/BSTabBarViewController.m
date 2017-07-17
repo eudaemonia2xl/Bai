@@ -20,8 +20,8 @@
 
 @implementation BSTabBarViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
++ (void)initialize
+{
     
     // 通过appearance统一设置所有UITabBarItem的文字属性
     // 后面带有UI_APPEARANCE_SELECTOR的方法, 都可以通过appearance对象来统一设置
@@ -36,6 +36,10 @@
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:dict forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
 
     //设置子控制器
     [self setupChildViewController:[[BSEssenceViewController alloc] init] WithTitle:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];

@@ -1,5 +1,5 @@
 //
-//  BSRecommendViewController.h
+//  BSRecommendController.h
 //  BaiSiJie
 //
 //  Created by senyint on 2017/7/17.
