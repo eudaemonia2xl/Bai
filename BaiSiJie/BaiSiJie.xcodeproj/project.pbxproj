@@ -16,9 +16,14 @@
 		0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E91F164FBF007C0D25 /* BSTabBar.m */; };
 		0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288EB1F164FBF007C0D25 /* BSTabBarViewController.m */; };
 		0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288F01F164FBF007C0D25 /* BSEssenceViewController.m */; };
-		0E2288FE1F164FBF007C0D25 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288F61F164FBF007C0D25 /* BSFriendTrendsViewController.m */; };
 		0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289021F164FD4007C0D25 /* BSMeViewController.m */; };
 		0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289081F164FD4007C0D25 /* BSNewViewController.m */; };
+		AA9C683D34C9D5AD809CD681 /* libPods-BaiSiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794295E919053EE028329934 /* libPods-BaiSiJie.a */; };
+		F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */; };
+		F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F401C7F01F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib */; };
+		F401C7F61F1C7D9C00AF6FC0 /* BSRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7F41F1C7D9C00AF6FC0 /* BSRecommendController.m */; };
+		F401C7F71F1C7D9C00AF6FC0 /* BSRecommendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F401C7F51F1C7D9C00AF6FC0 /* BSRecommendController.xib */; };
+		F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7F81F1C81A100AF6FC0 /* Foundation+Log.m */; };
 		F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4294F0A1F17333E00BB0C2E /* BSNavigationController.m */; };
 /* End PBXBuildFile section */
 
@@ -41,14 +46,22 @@
 		0E2288EC1F164FBF007C0D25 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0E2288EF1F164FBF007C0D25 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
 		0E2288F01F164FBF007C0D25 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
-		0E2288F51F164FBF007C0D25 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
-		0E2288F61F164FBF007C0D25 /* BSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFriendTrendsViewController.m; sourceTree = "<group>"; };
 		0E2289011F164FD4007C0D25 /* BSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeViewController.h; sourceTree = "<group>"; };
 		0E2289021F164FD4007C0D25 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
 		0E2289071F164FD4007C0D25 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
 		0E2289081F164FD4007C0D25 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
+		794295E919053EE028329934 /* libPods-BaiSiJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA77BD1340C6C322AF022CFD /* Pods-BaiSiJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiJie/Pods-BaiSiJie.debug.xcconfig"; sourceTree = "<group>"; };
+		F401C7EE1F1C653C00AF6FC0 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
+		F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSFriendTrendsViewController.m; sourceTree = "<group>"; };
+		F401C7F01F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		F401C7F31F1C7D9C00AF6FC0 /* BSRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendController.h; sourceTree = "<group>"; };
+		F401C7F41F1C7D9C00AF6FC0 /* BSRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendController.m; sourceTree = "<group>"; };
+		F401C7F51F1C7D9C00AF6FC0 /* BSRecommendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendController.xib; sourceTree = "<group>"; };
+		F401C7F81F1C81A100AF6FC0 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		F4294F091F17333E00BB0C2E /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		F4294F0A1F17333E00BB0C2E /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		FC278EC2E9FA8986C2349F5E /* Pods-BaiSiJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiJie/Pods-BaiSiJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9C683D34C9D5AD809CD681 /* libPods-BaiSiJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +81,8 @@
 			children = (
 				0E13DC071F0E6C7C00C81D2D /* BaiSiJie */,
 				0E13DC061F0E6C7C00C81D2D /* Products */,
+				61A006915F047A28BFA9F284 /* Pods */,
+				EEE9C53C1C01B025EFAE3C4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +113,7 @@
 		0E13DC081F0E6C7C00C81D2D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F401C7F81F1C81A100AF6FC0 /* Foundation+Log.m */,
 				0E13DC191F0E6C7C00C81D2D /* Info.plist */,
 				0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */,
 				0E13DC161F0E6C7C00C81D2D /* LaunchScreen.storyboard */,
@@ -180,8 +197,12 @@
 		0E2288F41F164FBF007C0D25 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0E2288F51F164FBF007C0D25 /* BSFriendTrendsViewController.h */,
-				0E2288F61F164FBF007C0D25 /* BSFriendTrendsViewController.m */,
+				F401C7EE1F1C653C00AF6FC0 /* BSFriendTrendsViewController.h */,
+				F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */,
+				F401C7F01F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib */,
+				F401C7F31F1C7D9C00AF6FC0 /* BSRecommendController.h */,
+				F401C7F41F1C7D9C00AF6FC0 /* BSRecommendController.m */,
+				F401C7F51F1C7D9C00AF6FC0 /* BSRecommendController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,6 +289,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		61A006915F047A28BFA9F284 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD1340C6C322AF022CFD /* Pods-BaiSiJie.debug.xcconfig */,
+				FC278EC2E9FA8986C2349F5E /* Pods-BaiSiJie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EEE9C53C1C01B025EFAE3C4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				794295E919053EE028329934 /* libPods-BaiSiJie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -275,9 +313,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E13DC1C1F0E6C7C00C81D2D /* Build configuration list for PBXNativeTarget "BaiSiJie" */;
 			buildPhases = (
+				59DDD438F54895E12934D2AE /* [CP] Check Pods Manifest.lock */,
 				0E13DC011F0E6C7C00C81D2D /* Sources */,
 				0E13DC021F0E6C7C00C81D2D /* Frameworks */,
 				0E13DC031F0E6C7C00C81D2D /* Resources */,
+				F370ABFA0537C2AF0B57D936 /* [CP] Embed Pods Frameworks */,
+				D3D4A66E0C69266F6331CC84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -328,6 +369,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F401C7F71F1C7D9C00AF6FC0 /* BSRecommendController.xib in Resources */,
+				F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */,
 				0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */,
 				0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */,
 			);
@@ -335,20 +378,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		59DDD438F54895E12934D2AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3D4A66E0C69266F6331CC84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiSiJie/Pods-BaiSiJie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F370ABFA0537C2AF0B57D936 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiSiJie/Pods-BaiSiJie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0E13DC011F0E6C7C00C81D2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F401C7F61F1C7D9C00AF6FC0 /* BSRecommendController.m in Sources */,
 				0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */,
 				0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */,
 				F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */,
 				0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */,
 				0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */,
 				0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */,
+				F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */,
 				0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */,
-				0E2288FE1F164FBF007C0D25 /* BSFriendTrendsViewController.m in Sources */,
 				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
+				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,
 				0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */,
 			);
@@ -460,6 +553,7 @@
 		};
 		0E13DC1D1F0E6C7C00C81D2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA77BD1340C6C322AF022CFD /* Pods-BaiSiJie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -475,6 +569,7 @@
 		};
 		0E13DC1E1F0E6C7C00C81D2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC278EC2E9FA8986C2349F5E /* Pods-BaiSiJie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

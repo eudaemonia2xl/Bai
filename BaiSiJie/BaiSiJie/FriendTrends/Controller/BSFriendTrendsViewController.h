@@ -2,7 +2,7 @@
 //  BSFriendTrendsViewController.h
 //  BaiSiJie
 //
-//  Created by 郑雪利 on 2017/7/10.
+//  Created by senyint on 2017/7/17.
 //  Copyright © 2017年 郑雪利. All rights reserved.
 //
 
