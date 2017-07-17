@@ -18,9 +18,11 @@
     return recommand;
 }
 
-+ (void)mj_setupReplacedKeyFromPropertyName:(MJReplacedKeyFromPropertyName)replacedKeyFromPropertyName
++ (void)load
 {
-    
+    [self mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{@"ID":@"id"};
+    }];
 }
 
 @end

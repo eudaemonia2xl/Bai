@@ -11,6 +11,8 @@
 		0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E13DC0C1F0E6C7C00C81D2D /* AppDelegate.m */; };
 		0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */; };
 		0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC161F0E6C7C00C81D2D /* LaunchScreen.storyboard */; };
+		0E1D9B7E1F1CCF9C00377BA2 /* BSRecommandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D9B7C1F1CCF9C00377BA2 /* BSRecommandCell.m */; };
+		0E1D9B7F1F1CCF9C00377BA2 /* BSRecommandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1D9B7D1F1CCF9C00377BA2 /* BSRecommandCell.xib */; };
 		0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */; };
 		0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E61F164FBF007C0D25 /* UIView+BSView.m */; };
 		0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E91F164FBF007C0D25 /* BSTabBar.m */; };
@@ -36,6 +38,9 @@
 		0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E13DC171F0E6C7C00C81D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E13DC191F0E6C7C00C81D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E1D9B7B1F1CCF9C00377BA2 /* BSRecommandCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommandCell.h; sourceTree = "<group>"; };
+		0E1D9B7C1F1CCF9C00377BA2 /* BSRecommandCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommandCell.m; sourceTree = "<group>"; };
+		0E1D9B7D1F1CCF9C00377BA2 /* BSRecommandCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommandCell.xib; sourceTree = "<group>"; };
 		0E2288E31F164FBF007C0D25 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
 		0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
 		0E2288E51F164FBF007C0D25 /* UIView+BSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSView.h"; sourceTree = "<group>"; };
@@ -222,6 +227,9 @@
 		0E2288F81F164FBF007C0D25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E1D9B7B1F1CCF9C00377BA2 /* BSRecommandCell.h */,
+				0E1D9B7C1F1CCF9C00377BA2 /* BSRecommandCell.m */,
+				0E1D9B7D1F1CCF9C00377BA2 /* BSRecommandCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E1D9B7F1F1CCF9C00377BA2 /* BSRecommandCell.xib in Resources */,
 				F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */,
 				F401C8001F1CB87600AF6FC0 /* BSRecommendController.xib in Resources */,
 				0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */,
@@ -441,6 +450,7 @@
 				F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */,
 				0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */,
 				F401C7FF1F1CB87600AF6FC0 /* BSRecommendController.m in Sources */,
+				0E1D9B7E1F1CCF9C00377BA2 /* BSRecommandCell.m in Sources */,
 				0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */,
 				0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */,
 				F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */,

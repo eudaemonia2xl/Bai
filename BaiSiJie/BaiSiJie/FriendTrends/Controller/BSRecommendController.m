@@ -9,6 +9,8 @@
 #import "BSRecommendController.h"
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
+#import <MJExtension/MJExtension.h>
+#import "BSRecommandLeft.h"
 
 @interface BSRecommendController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -32,8 +34,8 @@
     NSDictionary *dict = @{@"a":@"category",
                            @"c":@"subscribe"};
     [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        _categoriesArray = [NSMutableArray arrayWithArray:responseObject[@"list"]];
-        DLog(@"%@",_categoriesArray);
+        NSArray *modelArr = [BSRecommandLeft mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self.categoriesArray addObjectsFromArray:modelArr];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         DLog(@"%@",error);
     }];
