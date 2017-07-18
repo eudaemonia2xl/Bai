@@ -123,6 +123,7 @@ static NSString *userID = @"user";
         // 显示曾经的数据
         [self.userTableView reloadData];
     }else{
+        [self.userTableView reloadData];
         // 发送请求给服务器, 加载右侧的数据
         NSDictionary *dict = @{@"a":@"list",
                                @"c":@"subscribe",
