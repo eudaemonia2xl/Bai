@@ -6,23 +6,24 @@
 //  Copyright © 2017年 郑雪利. All rights reserved.
 //
 
-#import "BSRecommandLeft.h"
+#import "BSRecommandCategory.h"
 #import "MJExtension.h"
 
-@implementation BSRecommandLeft
-
-+ (instancetype)recommandWithDict:(NSDictionary *)dict
-{
-    BSRecommandLeft *recommand = [[self alloc] init];
-    
-    return recommand;
-}
+@implementation BSRecommandCategory
 
 + (void)load
 {
     [self mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{@"ID":@"id"};
     }];
+}
+
+- (NSMutableArray *)users
+{
+    if (_users == nil) {
+        _users = [NSMutableArray array];
+    }
+    return _users;
 }
 
 @end

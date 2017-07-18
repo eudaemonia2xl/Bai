@@ -8,15 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BSRecommandLeft : NSObject
+@interface BSRecommandCategory : NSObject
 
-//count : 7,
-//id : 36,
-//name : 精品
-@property (nonatomic, strong) NSNumber *count;
-@property (nonatomic, strong) NSNumber *ID;
+@property (nonatomic, assign) NSInteger count;
+@property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, strong) NSString *name;
 
-+ (instancetype)recommandWithDict:(NSDictionary *)dict;
-
+/** 这个类别对应的用户数据 */
+@property (nonatomic, strong) NSMutableArray *users;
 @end

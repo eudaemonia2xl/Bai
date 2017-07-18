@@ -11,8 +11,6 @@
 		0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E13DC0C1F0E6C7C00C81D2D /* AppDelegate.m */; };
 		0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */; };
 		0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC161F0E6C7C00C81D2D /* LaunchScreen.storyboard */; };
-		0E1D9B7E1F1CCF9C00377BA2 /* BSRecommandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D9B7C1F1CCF9C00377BA2 /* BSRecommandCell.m */; };
-		0E1D9B7F1F1CCF9C00377BA2 /* BSRecommandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1D9B7D1F1CCF9C00377BA2 /* BSRecommandCell.xib */; };
 		0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */; };
 		0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E61F164FBF007C0D25 /* UIView+BSView.m */; };
 		0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E91F164FBF007C0D25 /* BSTabBar.m */; };
@@ -26,8 +24,13 @@
 		F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7F81F1C81A100AF6FC0 /* Foundation+Log.m */; };
 		F401C7FF1F1CB87600AF6FC0 /* BSRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7FD1F1CB87600AF6FC0 /* BSRecommendController.m */; };
 		F401C8001F1CB87600AF6FC0 /* BSRecommendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F401C7FE1F1CB87600AF6FC0 /* BSRecommendController.xib */; };
-		F401C8031F1CBA4D00AF6FC0 /* BSRecommandLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C8021F1CBA4D00AF6FC0 /* BSRecommandLeft.m */; };
+		F401C8031F1CBA4D00AF6FC0 /* BSRecommandCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C8021F1CBA4D00AF6FC0 /* BSRecommandCategory.m */; };
 		F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4294F0A1F17333E00BB0C2E /* BSNavigationController.m */; };
+		F430A7451F1DD25D005FD2ED /* BSCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F430A7431F1DD25D005FD2ED /* BSCategoryCell.m */; };
+		F430A7461F1DD25D005FD2ED /* BSCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F430A7441F1DD25D005FD2ED /* BSCategoryCell.xib */; };
+		F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F430A7481F1DF6BE005FD2ED /* BSUserCell.m */; };
+		F430A74B1F1DF6BE005FD2ED /* BSUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F430A7491F1DF6BE005FD2ED /* BSUserCell.xib */; };
+		F430A74E1F1DFC81005FD2ED /* BSRecommandUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F430A74D1F1DFC81005FD2ED /* BSRecommandUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +41,6 @@
 		0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E13DC171F0E6C7C00C81D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E13DC191F0E6C7C00C81D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E1D9B7B1F1CCF9C00377BA2 /* BSRecommandCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommandCell.h; sourceTree = "<group>"; };
-		0E1D9B7C1F1CCF9C00377BA2 /* BSRecommandCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommandCell.m; sourceTree = "<group>"; };
-		0E1D9B7D1F1CCF9C00377BA2 /* BSRecommandCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommandCell.xib; sourceTree = "<group>"; };
 		0E2288E31F164FBF007C0D25 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
 		0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
 		0E2288E51F164FBF007C0D25 /* UIView+BSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSView.h"; sourceTree = "<group>"; };
@@ -65,10 +65,18 @@
 		F401C7FC1F1CB87600AF6FC0 /* BSRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendController.h; sourceTree = "<group>"; };
 		F401C7FD1F1CB87600AF6FC0 /* BSRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendController.m; sourceTree = "<group>"; };
 		F401C7FE1F1CB87600AF6FC0 /* BSRecommendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommendController.xib; sourceTree = "<group>"; };
-		F401C8011F1CBA4D00AF6FC0 /* BSRecommandLeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSRecommandLeft.h; path = BaiSiJie/FriendTrends/Controller/BSRecommandLeft.h; sourceTree = SOURCE_ROOT; };
-		F401C8021F1CBA4D00AF6FC0 /* BSRecommandLeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSRecommandLeft.m; path = BaiSiJie/FriendTrends/Controller/BSRecommandLeft.m; sourceTree = SOURCE_ROOT; };
+		F401C8011F1CBA4D00AF6FC0 /* BSRecommandCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSRecommandCategory.h; path = BaiSiJie/FriendTrends/Controller/BSRecommandCategory.h; sourceTree = SOURCE_ROOT; };
+		F401C8021F1CBA4D00AF6FC0 /* BSRecommandCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSRecommandCategory.m; path = BaiSiJie/FriendTrends/Controller/BSRecommandCategory.m; sourceTree = SOURCE_ROOT; };
 		F4294F091F17333E00BB0C2E /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		F4294F0A1F17333E00BB0C2E /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		F430A7421F1DD25D005FD2ED /* BSCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCategoryCell.h; sourceTree = "<group>"; };
+		F430A7431F1DD25D005FD2ED /* BSCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCategoryCell.m; sourceTree = "<group>"; };
+		F430A7441F1DD25D005FD2ED /* BSCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCategoryCell.xib; sourceTree = "<group>"; };
+		F430A7471F1DF6BE005FD2ED /* BSUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUserCell.h; sourceTree = "<group>"; };
+		F430A7481F1DF6BE005FD2ED /* BSUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserCell.m; sourceTree = "<group>"; };
+		F430A7491F1DF6BE005FD2ED /* BSUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSUserCell.xib; sourceTree = "<group>"; };
+		F430A74C1F1DFC81005FD2ED /* BSRecommandUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSRecommandUser.h; path = BaiSiJie/FriendTrends/View/BSRecommandUser.h; sourceTree = SOURCE_ROOT; };
+		F430A74D1F1DFC81005FD2ED /* BSRecommandUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSRecommandUser.m; path = BaiSiJie/FriendTrends/View/BSRecommandUser.m; sourceTree = SOURCE_ROOT; };
 		FC278EC2E9FA8986C2349F5E /* Pods-BaiSiJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiJie/Pods-BaiSiJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,8 +226,10 @@
 		0E2288F71F164FBF007C0D25 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F401C8011F1CBA4D00AF6FC0 /* BSRecommandLeft.h */,
-				F401C8021F1CBA4D00AF6FC0 /* BSRecommandLeft.m */,
+				F401C8011F1CBA4D00AF6FC0 /* BSRecommandCategory.h */,
+				F401C8021F1CBA4D00AF6FC0 /* BSRecommandCategory.m */,
+				F430A74C1F1DFC81005FD2ED /* BSRecommandUser.h */,
+				F430A74D1F1DFC81005FD2ED /* BSRecommandUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,9 +237,12 @@
 		0E2288F81F164FBF007C0D25 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0E1D9B7B1F1CCF9C00377BA2 /* BSRecommandCell.h */,
-				0E1D9B7C1F1CCF9C00377BA2 /* BSRecommandCell.m */,
-				0E1D9B7D1F1CCF9C00377BA2 /* BSRecommandCell.xib */,
+				F430A7421F1DD25D005FD2ED /* BSCategoryCell.h */,
+				F430A7431F1DD25D005FD2ED /* BSCategoryCell.m */,
+				F430A7441F1DD25D005FD2ED /* BSCategoryCell.xib */,
+				F430A7471F1DF6BE005FD2ED /* BSUserCell.h */,
+				F430A7481F1DF6BE005FD2ED /* BSUserCell.m */,
+				F430A7491F1DF6BE005FD2ED /* BSUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -382,11 +395,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E1D9B7F1F1CCF9C00377BA2 /* BSRecommandCell.xib in Resources */,
 				F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */,
 				F401C8001F1CB87600AF6FC0 /* BSRecommendController.xib in Resources */,
 				0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */,
 				0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */,
+				F430A7461F1DD25D005FD2ED /* BSCategoryCell.xib in Resources */,
+				F430A74B1F1DF6BE005FD2ED /* BSUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,19 +460,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */,
+				F430A7451F1DD25D005FD2ED /* BSCategoryCell.m in Sources */,
 				0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */,
+				F430A74E1F1DFC81005FD2ED /* BSRecommandUser.m in Sources */,
 				F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */,
 				0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */,
 				F401C7FF1F1CB87600AF6FC0 /* BSRecommendController.m in Sources */,
-				0E1D9B7E1F1CCF9C00377BA2 /* BSRecommandCell.m in Sources */,
 				0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */,
 				0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */,
 				F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */,
 				0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */,
 				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
+				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,
-				F401C8031F1CBA4D00AF6FC0 /* BSRecommandLeft.m in Sources */,
+				F401C8031F1CBA4D00AF6FC0 /* BSRecommandCategory.m in Sources */,
 				0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
