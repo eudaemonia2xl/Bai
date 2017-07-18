@@ -34,8 +34,41 @@ static NSString *userID = @"user";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
+    // 控件的初始化
+    [self configTableView];
+    
+    // 显示指示器
+    [SVProgressHUD show];
+    
+    // 发送请求
+    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    NSDictionary *dict = @{@"a":@"category",
+                           @"c":@"subscribe"};
+    [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        // 隐藏指示器
+        [SVProgressHUD dismiss];
+        
+        // 服务器返回的JSON数据 字典数组->模型数组
+        NSArray *modelArr = [BSRecommandCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self.categoriesArray addObjectsFromArray:modelArr];
+
+         // 刷新表格
+        [self.categoryTableView reloadData];
+        
+        //默认选中第一行
+        [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        // 显示失败信息
+        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",error]];
+    }];
+}
+
+- (void)configTableView
+{
+    //设置标题
     self.navigationItem.title = @"推荐关注";
     
     // 设置inset
@@ -47,27 +80,14 @@ static NSString *userID = @"user";
     [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSCategoryCell class]) bundle:nil] forCellReuseIdentifier:categoryID];
     [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSUserCell class]) bundle:nil] forCellReuseIdentifier:userID];
     
+    //设置背景色
     self.view.backgroundColor = RGBColor(223, 12, 240);
-    
-    [SVProgressHUD show];
-    
-    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
-    NSDictionary *dict = @{@"a":@"category",
-                           @"c":@"subscribe"};
-    [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        NSArray *modelArr = [BSRecommandCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        [self.categoriesArray addObjectsFromArray:modelArr];
-        
-        [SVProgressHUD dismiss];
-        [self.categoryTableView reloadData];
-        
-        //默认选中第一行
-        [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"%@",error]];
-    }];
+
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.categoriesArray.count > 0 ? 1 : 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -84,11 +104,11 @@ static NSString *userID = @"user";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (tableView == self.categoryTableView) {
+    if (tableView == self.categoryTableView) {// 左边的类别表格
         BSCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:categoryID];
         cell.category = self.categoriesArray[indexPath.row];
         return cell;
-    } else {
+    } else {// 右边的用户表格
         BSRecommandCategory *category = self.categoriesArray[self.categoryTableView.indexPathForSelectedRow.row];
         BSUserCell *cell = [tableView dequeueReusableCellWithIdentifier:userID];
         cell.user = category.users[indexPath.row];
@@ -99,17 +119,23 @@ static NSString *userID = @"user";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BSRecommandCategory *category = self.categoriesArray[indexPath.row];
-    if (category.users.count) {// 显示曾经的数据
+    if (category.users.count) {
+        // 显示曾经的数据
         [self.userTableView reloadData];
     }else{
+        // 发送请求给服务器, 加载右侧的数据
         NSDictionary *dict = @{@"a":@"list",
                                @"c":@"subscribe",
                                @"category_id":@(category.ID),
                                @"page":@(1)};
         [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            // 字典数组 -> 模型数组
             NSArray *tempArray = [BSRecommandUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            
+            // 添加到当前类别对应的用户数组中
             [category.users addObjectsFromArray:tempArray];
             
+            // 刷新右边的表格
             [self.userTableView reloadData];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             DLog(@"%@",error);
