@@ -14,6 +14,7 @@
 #import "BSCategoryCell.h"
 #import "BSUserCell.h"
 #import "BSRecommandUser.h"
+#import <MJRefresh.h>
 
 @interface BSRecommendController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -37,6 +38,9 @@ static NSString *userID = @"user";
     
     // 控件的初始化
     [self configTableView];
+    
+    // 添加刷新控件
+    [self configRefresh];
     
     // 显示指示器
     [SVProgressHUD show];
@@ -83,6 +87,32 @@ static NSString *userID = @"user";
     //设置背景色
     self.view.backgroundColor = RGBColor(223, 12, 240);
 
+}
+
+- (void)configRefresh
+{
+    BSRecommandCategory *category = self.categoriesArray[self.categoryTableView.indexPathForSelectedRow.row];
+    
+    self.userTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        // 发送请求给服务器, 加载右侧的数据
+        NSDictionary *dict = @{@"a":@"list",
+                               @"c":@"subscribe",
+                               @"category_id":@(category.ID),
+                               @"page":@(++category.currentPage)};
+        [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            // 字典数组 -> 模型数组
+            NSArray *tempArray = [BSRecommandUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            
+            // 添加到当前类别对应的用户数组中
+            [category.users addObjectsFromArray:tempArray];
+            
+            // 刷新右边的表格
+            [self.userTableView reloadData];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            DLog(@"%@",error);
+        }];
+
+    }];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
