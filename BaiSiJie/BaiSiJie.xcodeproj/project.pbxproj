@@ -593,6 +593,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = BaiSiJie/Common/PrefixHeader.pch;
 				INFOPLIST_FILE = BaiSiJie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZXL.BaiSiJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -609,6 +610,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = BaiSiJie/Common/PrefixHeader.pch;
 				INFOPLIST_FILE = BaiSiJie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZXL.BaiSiJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";

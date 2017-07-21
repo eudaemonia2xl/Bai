@@ -14,7 +14,7 @@
 @property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, strong) NSString *name;
 
-/** 这个类别对应的用户数据 */
+/** 这个类别对应的用户数据,为了解决重复发送请求新增属性 */
 @property (nonatomic, strong) NSMutableArray *users;
 
 //当前页
