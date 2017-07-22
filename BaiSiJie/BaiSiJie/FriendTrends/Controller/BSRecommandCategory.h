@@ -17,6 +17,9 @@
 /** 这个类别对应的用户数据,为了解决重复发送请求新增属性 */
 @property (nonatomic, strong) NSMutableArray *users;
 
+//总数
+@property (assign, nonatomic) NSInteger total;
+
 //当前页
 @property (assign, nonatomic) NSInteger currentPage;
 
