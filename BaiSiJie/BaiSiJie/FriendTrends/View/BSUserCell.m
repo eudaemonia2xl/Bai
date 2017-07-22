@@ -23,7 +23,15 @@
     _user = user;
     [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.screenNameLabel.text = user.screen_name;
-    self.fansCountLabel.text = [NSString stringWithFormat:@"%zd人关注",user.fans_count];
+    
+    NSString *fansCountString = nil;
+    if (user.fans_count > 10000) {
+        fansCountString = [NSString stringWithFormat:@"%.1f万人关注",user.fans_count / 10000.0];
+    }else {
+        fansCountString = [NSString stringWithFormat:@"%zd人关注",user.fans_count];
+    }
+    
+    self.fansCountLabel.text = fansCountString;
 }
 
 - (void)awakeFromNib {

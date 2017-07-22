@@ -11,6 +11,10 @@
 		0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E13DC0C1F0E6C7C00C81D2D /* AppDelegate.m */; };
 		0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */; };
 		0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC161F0E6C7C00C81D2D /* LaunchScreen.storyboard */; };
+		0E178CC41F23290E00FC8815 /* BSRecommandTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E178CC31F23290E00FC8815 /* BSRecommandTagViewController.m */; };
+		0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E178CC61F232A9200FC8815 /* BSRecommandTag.m */; };
+		0E178CCB1F232AE200FC8815 /* BSRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E178CC91F232AE200FC8815 /* BSRecommandTagCell.m */; };
+		0E178CCC1F232AE200FC8815 /* BSRecommandTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E178CCA1F232AE200FC8815 /* BSRecommandTagCell.xib */; };
 		0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */; };
 		0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E61F164FBF007C0D25 /* UIView+BSView.m */; };
 		0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E91F164FBF007C0D25 /* BSTabBar.m */; };
@@ -41,6 +45,13 @@
 		0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E13DC171F0E6C7C00C81D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E13DC191F0E6C7C00C81D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E178CC21F23290E00FC8815 /* BSRecommandTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommandTagViewController.h; sourceTree = "<group>"; };
+		0E178CC31F23290E00FC8815 /* BSRecommandTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommandTagViewController.m; sourceTree = "<group>"; };
+		0E178CC51F232A9200FC8815 /* BSRecommandTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommandTag.h; sourceTree = "<group>"; };
+		0E178CC61F232A9200FC8815 /* BSRecommandTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommandTag.m; sourceTree = "<group>"; };
+		0E178CC81F232AE200FC8815 /* BSRecommandTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommandTagCell.h; sourceTree = "<group>"; };
+		0E178CC91F232AE200FC8815 /* BSRecommandTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommandTagCell.m; sourceTree = "<group>"; };
+		0E178CCA1F232AE200FC8815 /* BSRecommandTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommandTagCell.xib; sourceTree = "<group>"; };
 		0E2288E31F164FBF007C0D25 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
 		0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
 		0E2288E51F164FBF007C0D25 /* UIView+BSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSView.h"; sourceTree = "<group>"; };
@@ -181,6 +192,8 @@
 			children = (
 				0E2288EF1F164FBF007C0D25 /* BSEssenceViewController.h */,
 				0E2288F01F164FBF007C0D25 /* BSEssenceViewController.m */,
+				0E178CC21F23290E00FC8815 /* BSRecommandTagViewController.h */,
+				0E178CC31F23290E00FC8815 /* BSRecommandTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +201,8 @@
 		0E2288F11F164FBF007C0D25 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E178CC51F232A9200FC8815 /* BSRecommandTag.h */,
+				0E178CC61F232A9200FC8815 /* BSRecommandTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +210,9 @@
 		0E2288F21F164FBF007C0D25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E178CC81F232AE200FC8815 /* BSRecommandTagCell.h */,
+				0E178CC91F232AE200FC8815 /* BSRecommandTagCell.m */,
+				0E178CCA1F232AE200FC8815 /* BSRecommandTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,6 +419,7 @@
 				0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */,
 				F430A7461F1DD25D005FD2ED /* BSCategoryCell.xib in Resources */,
 				F430A74B1F1DF6BE005FD2ED /* BSUserCell.xib in Resources */,
+				0E178CCC1F232AE200FC8815 /* BSRecommandTagCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +481,7 @@
 				0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */,
 				F430A7451F1DD25D005FD2ED /* BSCategoryCell.m in Sources */,
 				0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */,
+				0E178CC41F23290E00FC8815 /* BSRecommandTagViewController.m in Sources */,
 				F430A74E1F1DFC81005FD2ED /* BSRecommandUser.m in Sources */,
 				F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */,
 				0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */,
@@ -472,9 +492,11 @@
 				0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */,
 				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
 				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
+				0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,
 				F401C8031F1CBA4D00AF6FC0 /* BSRecommandCategory.m in Sources */,
+				0E178CCB1F232AE200FC8815 /* BSRecommandTagCell.m in Sources */,
 				0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 #import "BSEssenceViewController.h"
+#import "BSRecommandTagViewController.h"
 
 @interface BSEssenceViewController ()
 
@@ -30,7 +31,8 @@
 
 - (void)click
 {
-    DLog(@"%s",__func__);
+    BSRecommandTagViewController *vc = [[BSRecommandTagViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
