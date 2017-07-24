@@ -8,6 +8,7 @@
 
 #import "BSFriendTrendsViewController.h"
 #import "BSRecommendController.h"
+#import "BSLoginRegisterController.h"
 
 @interface BSFriendTrendsViewController ()
 
@@ -24,15 +25,16 @@
     
     //设置背景色
     self.view.backgroundColor = RGBColor(223, 223, 223);
-    
-    DLog(@"BSFriendTrendsViewController");
-    
 }
 
 - (void)click
 {
     BSRecommendController *recommendVC = [[BSRecommendController alloc] init];
     [self.navigationController pushViewController:recommendVC animated:YES];
+}
+- (IBAction)loginRegisterBtn:(id)sender {
+    BSLoginRegisterController *loginVC = [[BSLoginRegisterController alloc] init];
+    [self.navigationController presentViewController:loginVC animated:YES completion:nil];
 }
 
 /*

@@ -35,6 +35,8 @@
 		F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F430A7481F1DF6BE005FD2ED /* BSUserCell.m */; };
 		F430A74B1F1DF6BE005FD2ED /* BSUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F430A7491F1DF6BE005FD2ED /* BSUserCell.xib */; };
 		F430A74E1F1DFC81005FD2ED /* BSRecommandUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F430A74D1F1DFC81005FD2ED /* BSRecommandUser.m */; };
+		F4DE0AC61F25BD3B0005F4CC /* BSLoginRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DE0AC41F25BD3B0005F4CC /* BSLoginRegisterController.m */; };
+		F4DE0AC71F25BD3B0005F4CC /* BSLoginRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DE0AC51F25BD3B0005F4CC /* BSLoginRegisterController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,9 @@
 		F430A7491F1DF6BE005FD2ED /* BSUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSUserCell.xib; sourceTree = "<group>"; };
 		F430A74C1F1DFC81005FD2ED /* BSRecommandUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSRecommandUser.h; path = BaiSiJie/FriendTrends/View/BSRecommandUser.h; sourceTree = SOURCE_ROOT; };
 		F430A74D1F1DFC81005FD2ED /* BSRecommandUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSRecommandUser.m; path = BaiSiJie/FriendTrends/View/BSRecommandUser.m; sourceTree = SOURCE_ROOT; };
+		F4DE0AC31F25BD3B0005F4CC /* BSLoginRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginRegisterController.h; sourceTree = "<group>"; };
+		F4DE0AC41F25BD3B0005F4CC /* BSLoginRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginRegisterController.m; sourceTree = "<group>"; };
+		F4DE0AC51F25BD3B0005F4CC /* BSLoginRegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegisterController.xib; sourceTree = "<group>"; };
 		FC278EC2E9FA8986C2349F5E /* Pods-BaiSiJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiJie/Pods-BaiSiJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +239,9 @@
 				F401C7EE1F1C653C00AF6FC0 /* BSFriendTrendsViewController.h */,
 				F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */,
 				F401C7F01F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib */,
+				F4DE0AC31F25BD3B0005F4CC /* BSLoginRegisterController.h */,
+				F4DE0AC41F25BD3B0005F4CC /* BSLoginRegisterController.m */,
+				F4DE0AC51F25BD3B0005F4CC /* BSLoginRegisterController.xib */,
 				F401C7FC1F1CB87600AF6FC0 /* BSRecommendController.h */,
 				F401C7FD1F1CB87600AF6FC0 /* BSRecommendController.m */,
 				F401C7FE1F1CB87600AF6FC0 /* BSRecommendController.xib */,
@@ -418,6 +426,7 @@
 				0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */,
 				0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */,
 				F430A7461F1DD25D005FD2ED /* BSCategoryCell.xib in Resources */,
+				F4DE0AC71F25BD3B0005F4CC /* BSLoginRegisterController.xib in Resources */,
 				F430A74B1F1DF6BE005FD2ED /* BSUserCell.xib in Resources */,
 				0E178CCC1F232AE200FC8815 /* BSRecommandTagCell.xib in Resources */,
 			);
@@ -490,6 +499,7 @@
 				0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */,
 				F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */,
 				0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */,
+				F4DE0AC61F25BD3B0005F4CC /* BSLoginRegisterController.m in Sources */,
 				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
 				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
 				0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */,
