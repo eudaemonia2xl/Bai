@@ -18,6 +18,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+- (IBAction)cancelBtn:(id)sender {
+//    self.navigationController是nil,nil肯定无法调用dismissViewControllerAnimated方法，因为self是modal过来的控制器，没有self.navigationController
+//    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
