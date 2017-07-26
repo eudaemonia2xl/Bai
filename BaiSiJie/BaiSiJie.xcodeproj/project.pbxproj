@@ -22,6 +22,7 @@
 		0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288F01F164FBF007C0D25 /* BSEssenceViewController.m */; };
 		0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289021F164FD4007C0D25 /* BSMeViewController.m */; };
 		0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289081F164FD4007C0D25 /* BSNewViewController.m */; };
+		0E287B941F28D31600F3070B /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E287B931F28D31600F3070B /* BSTextField.m */; };
 		AA9C683D34C9D5AD809CD681 /* libPods-BaiSiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794295E919053EE028329934 /* libPods-BaiSiJie.a */; };
 		F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */; };
 		F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F401C7F01F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib */; };
@@ -69,6 +70,8 @@
 		0E2289021F164FD4007C0D25 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
 		0E2289071F164FD4007C0D25 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
 		0E2289081F164FD4007C0D25 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
+		0E287B921F28D31600F3070B /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
+		0E287B931F28D31600F3070B /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
 		794295E919053EE028329934 /* libPods-BaiSiJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA77BD1340C6C322AF022CFD /* Pods-BaiSiJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiJie/Pods-BaiSiJie.debug.xcconfig"; sourceTree = "<group>"; };
 		F401C7EE1F1C653C00AF6FC0 /* BSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 				F430A7471F1DF6BE005FD2ED /* BSUserCell.h */,
 				F430A7481F1DF6BE005FD2ED /* BSUserCell.m */,
 				F430A7491F1DF6BE005FD2ED /* BSUserCell.xib */,
+				0E287B921F28D31600F3070B /* BSTextField.h */,
+				0E287B931F28D31600F3070B /* BSTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -501,6 +506,7 @@
 				0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */,
 				F4DE0AC61F25BD3B0005F4CC /* BSLoginRegisterController.m in Sources */,
 				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
+				0E287B941F28D31600F3070B /* BSTextField.m in Sources */,
 				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
 				0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,

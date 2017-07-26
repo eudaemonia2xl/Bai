@@ -9,6 +9,7 @@
 #import "BSLoginRegisterController.h"
 
 @interface BSLoginRegisterController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginViewLeftMargin;
 
 @end
 
@@ -17,15 +18,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
+    DLog(@"%@", self.view.subviews);
 }
 - (IBAction)cancelBtn:(id)sender {
 //    self.navigationController是nil,nil肯定无法调用dismissViewControllerAnimated方法，因为self是modal过来的控制器，没有self.navigationController
 //    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     
-    self.view.layer.cornerRadius = 5;
-    self.view.layer.masksToBounds = YES;
-    
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)loginRegisterBtn:(UIButton *)sender {
+    
+    [self.view endEditing:YES];
+    if (sender.selected == YES) {
+        self.loginViewLeftMargin.constant = 0;
+        sender.selected = NO;
+    } else {
+        sender.selected = YES;
+        self.loginViewLeftMargin.constant = -self.view.width;
+    }
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 /**
