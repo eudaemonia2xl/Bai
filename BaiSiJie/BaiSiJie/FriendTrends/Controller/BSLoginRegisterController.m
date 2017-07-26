@@ -22,7 +22,18 @@
 //    self.navigationController是nil,nil肯定无法调用dismissViewControllerAnimated方法，因为self是modal过来的控制器，没有self.navigationController
 //    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     
+    self.view.layer.cornerRadius = 5;
+    self.view.layer.masksToBounds = YES;
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+/**
+ * 设置状态栏颜色为白色
+ */
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
