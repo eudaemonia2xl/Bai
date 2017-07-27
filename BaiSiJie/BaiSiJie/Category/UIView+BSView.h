@@ -20,6 +20,11 @@
 @property (nonatomic, assign) CGFloat x;
 //宽度
 @property (nonatomic, assign) CGFloat y;
+//
+@property (nonatomic, assign) CGFloat centerX;
+//
+@property (nonatomic, assign) CGFloat centerY;
+
 
 //- (CGFloat)x;
 //- (void)setX:(CGFloat)x;
