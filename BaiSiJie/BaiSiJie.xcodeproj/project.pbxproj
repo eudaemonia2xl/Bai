@@ -36,6 +36,8 @@
 		F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F430A7481F1DF6BE005FD2ED /* BSUserCell.m */; };
 		F430A74B1F1DF6BE005FD2ED /* BSUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F430A7491F1DF6BE005FD2ED /* BSUserCell.xib */; };
 		F430A74E1F1DFC81005FD2ED /* BSRecommandUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F430A74D1F1DFC81005FD2ED /* BSRecommandUser.m */; };
+		F46B21381F298C9F00A61C6C /* BSGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B21371F298C9F00A61C6C /* BSGuideView.m */; };
+		F46B213A1F298CB100A61C6C /* BSGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46B21391F298CB100A61C6C /* BSGuideView.xib */; };
 		F4DE0AC61F25BD3B0005F4CC /* BSLoginRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DE0AC41F25BD3B0005F4CC /* BSLoginRegisterController.m */; };
 		F4DE0AC71F25BD3B0005F4CC /* BSLoginRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DE0AC51F25BD3B0005F4CC /* BSLoginRegisterController.xib */; };
 /* End PBXBuildFile section */
@@ -93,6 +95,9 @@
 		F430A7491F1DF6BE005FD2ED /* BSUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSUserCell.xib; sourceTree = "<group>"; };
 		F430A74C1F1DFC81005FD2ED /* BSRecommandUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSRecommandUser.h; path = BaiSiJie/FriendTrends/View/BSRecommandUser.h; sourceTree = SOURCE_ROOT; };
 		F430A74D1F1DFC81005FD2ED /* BSRecommandUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSRecommandUser.m; path = BaiSiJie/FriendTrends/View/BSRecommandUser.m; sourceTree = SOURCE_ROOT; };
+		F46B21361F298C9F00A61C6C /* BSGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGuideView.h; sourceTree = "<group>"; };
+		F46B21371F298C9F00A61C6C /* BSGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGuideView.m; sourceTree = "<group>"; };
+		F46B21391F298CB100A61C6C /* BSGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSGuideView.xib; sourceTree = "<group>"; };
 		F4DE0AC31F25BD3B0005F4CC /* BSLoginRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginRegisterController.h; sourceTree = "<group>"; };
 		F4DE0AC41F25BD3B0005F4CC /* BSLoginRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginRegisterController.m; sourceTree = "<group>"; };
 		F4DE0AC51F25BD3B0005F4CC /* BSLoginRegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegisterController.xib; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 				0E2288F31F164FBF007C0D25 /* FriendTrends(关注) */,
 				0E2288FF1F164FD4007C0D25 /* Me(我的) */,
 				0E2288E21F164FBF007C0D25 /* Category(分类) */,
+				F46B21351F298C6A00A61C6C /* Other */,
 				0E13DC081F0E6C7C00C81D2D /* Supporting Files */,
 			);
 			path = BaiSiJie;
@@ -363,6 +369,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F46B21351F298C6A00A61C6C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F46B21361F298C9F00A61C6C /* BSGuideView.h */,
+				F46B21371F298C9F00A61C6C /* BSGuideView.m */,
+				F46B21391F298CB100A61C6C /* BSGuideView.xib */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,6 +445,7 @@
 				F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */,
 				F401C8001F1CB87600AF6FC0 /* BSRecommendController.xib in Resources */,
 				0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */,
+				F46B213A1F298CB100A61C6C /* BSGuideView.xib in Resources */,
 				0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */,
 				F430A7461F1DD25D005FD2ED /* BSCategoryCell.xib in Resources */,
 				F4DE0AC71F25BD3B0005F4CC /* BSLoginRegisterController.xib in Resources */,
@@ -508,6 +525,7 @@
 				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
 				0E287B941F28D31600F3070B /* BSTextField.m in Sources */,
 				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
+				F46B21381F298C9F00A61C6C /* BSGuideView.m in Sources */,
 				0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,

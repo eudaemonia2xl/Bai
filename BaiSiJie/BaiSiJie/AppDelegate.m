@@ -8,13 +8,13 @@
 
 #import "AppDelegate.h"
 #import "BSTabBarViewController.h"
+#import "BSGuideView.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -25,6 +25,10 @@
     self.window.rootViewController = [[BSTabBarViewController alloc] init];
     
     [self.window makeKeyAndVisible];
+    
+    //第一次显示推送引导页面
+    [BSGuideView show];
+    
     return YES;
 }
 
