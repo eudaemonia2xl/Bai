@@ -28,6 +28,9 @@
     
     //设置标签栏
     [self setupTab];
+    
+    //设置scrollView
+    [self setupScrollView];
 }
 
 - (void)setupNav
@@ -88,6 +91,21 @@
         }
     }
 
+}
+
+- (void)setupScrollView
+{
+    DLog(@"fgsdf");
+    UIScrollView *contentScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
+    
+    contentScrollView.contentSize = CGSizeMake(self.view.width, 800);
+    
+    [self.view insertSubview:contentScrollView atIndex:0];
+    UISwitch *s = [[UISwitch alloc] init];
+    s.y = 50;
+    [contentScrollView addSubview:s];
+    
+    
 }
 
 //页签栏中按钮的点击事件
