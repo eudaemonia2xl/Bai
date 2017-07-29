@@ -8,13 +8,23 @@
 
 #import "BSEssenceViewController.h"
 #import "BSRecommandTagViewController.h"
+#import "BSAllViewController.h"
+#import "BSVideoViewController.h"
+#import "BSVoiceViewController.h"
+#import "BSPictureViewController.h"
+#import "BSWordViewController.h"
 
-@interface BSEssenceViewController ()
+@interface BSEssenceViewController ()<UIScrollViewDelegate>
 
 //标示当前选中的button
 @property (strong, nonatomic) UIView *indicatorView;
 //记录当前选中的button
 @property (strong, nonatomic) UIButton *selectedBtn;
+
+//创建标签栏背景
+@property (strong, nonatomic) UIView *bgView;
+//创建scrollView
+@property (strong, nonatomic) UIScrollView *contentScrollView;
 
 @end
 
@@ -26,11 +36,15 @@
     //设置导航栏
     [self setupNav];
     
+    //添加子控制器
+    [self addChildVCs];
+    
     //设置标签栏
     [self setupTab];
-    
+
     //设置scrollView
     [self setupScrollView];
+    
 }
 
 - (void)setupNav
@@ -45,13 +59,13 @@
     self.view.backgroundColor = RGBColor(223, 223, 223);
 }
 
-
 //纯代码方式创建标签栏
 - (void)setupTab
 {
     //创建标签栏背景
     UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 44)];
-    bgView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
+    bgView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.6];
+    self.bgView = bgView;
     [self.view addSubview:bgView];
     
     //创建底部红色指示view
@@ -72,6 +86,7 @@
     for (NSInteger i = 0; i < titles.count; i++) {
         UIButton *titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         titleBtnX = titleBtnW * i;
+        titleBtn.tag = (i + 1) * 10;
         titleBtn.frame = CGRectMake(titleBtnX, titleBtnY, titleBtnW, titleBtnH);
         [titleBtn setTitle:titles[i] forState:UIControlStateNormal];
         [titleBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
@@ -95,17 +110,40 @@
 
 - (void)setupScrollView
 {
-    DLog(@"fgsdf");
-    UIScrollView *contentScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    UIScrollView *contentScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     
-    contentScrollView.contentSize = CGSizeMake(self.view.width, 800);
-    
+    contentScrollView.contentSize = CGSizeMake(self.childViewControllers.count * contentScrollView.width, self.view.height);
+    contentScrollView.delegate = self;
+    contentScrollView.pagingEnabled = YES;
+    //设置内边距，可以让用户能够看到完整的内容
+//    contentScrollView.contentInset = UIEdgeInsetsMake(CGRectGetMaxY(self.bgView.frame), 0, self.tabBarController.tabBar.height, 0);
+
     [self.view insertSubview:contentScrollView atIndex:0];
-    UISwitch *s = [[UISwitch alloc] init];
-    s.y = 50;
-    [contentScrollView addSubview:s];
     
+    self.contentScrollView = contentScrollView;
     
+    //第一次调用时，显示第一个控制器
+    [self scrollViewDidEndScrollingAnimation:contentScrollView];
+}
+
+//添加子控制器
+- (void)addChildVCs
+{
+    BSAllViewController *all = [[BSAllViewController alloc] init];
+    [self addChildViewController:all];
+    
+    BSVideoViewController *video = [[BSVideoViewController alloc] init];
+    [self addChildViewController:video];
+    
+    BSVoiceViewController *voice = [[BSVoiceViewController alloc] init];
+    [self addChildViewController:voice];
+    
+    BSPictureViewController *picture = [[BSPictureViewController alloc] init];
+    [self addChildViewController:picture];
+    
+    BSWordViewController *word = [[BSWordViewController alloc] init];
+    [self addChildViewController:word];
 }
 
 //页签栏中按钮的点击事件
@@ -120,12 +158,41 @@
         self.indicatorView.width = sender.titleLabel.width;
         self.indicatorView.centerX = sender.centerX;
     }];
+    
+    //scrollView滚动
+    CGPoint offset = self.contentScrollView.contentOffset;
+    offset.x = self.view.width * (sender.tag / 10 - 1);
+//    self.contentScrollView.contentOffset = offset;
+    //只有这么设置scrollView的contentOffset，才会走scrollView的scrollViewDidEndScrollingAnimation代理方法
+    [self.contentScrollView setContentOffset:offset animated:YES];
 }
 
 - (void)click
 {
     BSRecommandTagViewController *vc = [[BSRecommandTagViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - UIScrollViewDelegate
+//当scrollView滚动结束时调用此方法，前提是设置scrollView的contentOffset是用[self.contentScrollView setContentOffset:offset animated:YES];这种方式实现
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    //首先获取到索引
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    
+    //取出子控制器
+    UITableViewController *tableVC = self.childViewControllers[index];
+    tableVC.view.frame = CGRectMake(scrollView.contentOffset.x, 0, self.view.width, scrollView.height);
+    
+    //设置tableView的内边距
+    CGFloat top = CGRectGetMaxY(self.bgView.frame);
+
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    tableVC.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    
+    // 设置滚动条的内边距
+    tableVC.tableView.scrollIndicatorInsets = tableVC.tableView.contentInset;
+    [scrollView addSubview:tableVC.view];
 }
 
 - (void)didReceiveMemoryWarning {

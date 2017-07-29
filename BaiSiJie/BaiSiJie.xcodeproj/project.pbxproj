@@ -15,6 +15,11 @@
 		0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E178CC61F232A9200FC8815 /* BSRecommandTag.m */; };
 		0E178CCB1F232AE200FC8815 /* BSRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E178CC91F232AE200FC8815 /* BSRecommandTagCell.m */; };
 		0E178CCC1F232AE200FC8815 /* BSRecommandTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E178CCA1F232AE200FC8815 /* BSRecommandTagCell.xib */; };
+		0E1A1F1E1F2CB71B0004BB41 /* BSAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F1D1F2CB71B0004BB41 /* BSAllViewController.m */; };
+		0E1A1F211F2CB7370004BB41 /* BSVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F201F2CB7370004BB41 /* BSVideoViewController.m */; };
+		0E1A1F241F2CB7450004BB41 /* BSVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F231F2CB7450004BB41 /* BSVoiceViewController.m */; };
+		0E1A1F271F2CB75A0004BB41 /* BSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F261F2CB75A0004BB41 /* BSPictureViewController.m */; };
+		0E1A1F2A1F2CB7680004BB41 /* BSWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F291F2CB7680004BB41 /* BSWordViewController.m */; };
 		0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */; };
 		0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E61F164FBF007C0D25 /* UIView+BSView.m */; };
 		0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E91F164FBF007C0D25 /* BSTabBar.m */; };
@@ -57,6 +62,16 @@
 		0E178CC81F232AE200FC8815 /* BSRecommandTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommandTagCell.h; sourceTree = "<group>"; };
 		0E178CC91F232AE200FC8815 /* BSRecommandTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommandTagCell.m; sourceTree = "<group>"; };
 		0E178CCA1F232AE200FC8815 /* BSRecommandTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSRecommandTagCell.xib; sourceTree = "<group>"; };
+		0E1A1F1C1F2CB71B0004BB41 /* BSAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAllViewController.h; sourceTree = "<group>"; };
+		0E1A1F1D1F2CB71B0004BB41 /* BSAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAllViewController.m; sourceTree = "<group>"; };
+		0E1A1F1F1F2CB7370004BB41 /* BSVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVideoViewController.h; sourceTree = "<group>"; };
+		0E1A1F201F2CB7370004BB41 /* BSVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVideoViewController.m; sourceTree = "<group>"; };
+		0E1A1F221F2CB7450004BB41 /* BSVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVoiceViewController.h; sourceTree = "<group>"; };
+		0E1A1F231F2CB7450004BB41 /* BSVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVoiceViewController.m; sourceTree = "<group>"; };
+		0E1A1F251F2CB75A0004BB41 /* BSPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureViewController.h; sourceTree = "<group>"; };
+		0E1A1F261F2CB75A0004BB41 /* BSPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureViewController.m; sourceTree = "<group>"; };
+		0E1A1F281F2CB7680004BB41 /* BSWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWordViewController.h; sourceTree = "<group>"; };
+		0E1A1F291F2CB7680004BB41 /* BSWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWordViewController.m; sourceTree = "<group>"; };
 		0E2288E31F164FBF007C0D25 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
 		0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
 		0E2288E51F164FBF007C0D25 /* UIView+BSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSView.h"; sourceTree = "<group>"; };
@@ -208,6 +223,16 @@
 				0E2288F01F164FBF007C0D25 /* BSEssenceViewController.m */,
 				0E178CC21F23290E00FC8815 /* BSRecommandTagViewController.h */,
 				0E178CC31F23290E00FC8815 /* BSRecommandTagViewController.m */,
+				0E1A1F1C1F2CB71B0004BB41 /* BSAllViewController.h */,
+				0E1A1F1D1F2CB71B0004BB41 /* BSAllViewController.m */,
+				0E1A1F1F1F2CB7370004BB41 /* BSVideoViewController.h */,
+				0E1A1F201F2CB7370004BB41 /* BSVideoViewController.m */,
+				0E1A1F221F2CB7450004BB41 /* BSVoiceViewController.h */,
+				0E1A1F231F2CB7450004BB41 /* BSVoiceViewController.m */,
+				0E1A1F251F2CB75A0004BB41 /* BSPictureViewController.h */,
+				0E1A1F261F2CB75A0004BB41 /* BSPictureViewController.m */,
+				0E1A1F281F2CB7680004BB41 /* BSWordViewController.h */,
+				0E1A1F291F2CB7680004BB41 /* BSWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -514,18 +539,23 @@
 				0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */,
 				0E178CC41F23290E00FC8815 /* BSRecommandTagViewController.m in Sources */,
 				F430A74E1F1DFC81005FD2ED /* BSRecommandUser.m in Sources */,
+				0E1A1F1E1F2CB71B0004BB41 /* BSAllViewController.m in Sources */,
 				F4294F0B1F17333E00BB0C2E /* BSNavigationController.m in Sources */,
 				0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */,
 				F401C7FF1F1CB87600AF6FC0 /* BSRecommendController.m in Sources */,
+				0E1A1F271F2CB75A0004BB41 /* BSPictureViewController.m in Sources */,
 				0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */,
+				0E1A1F211F2CB7370004BB41 /* BSVideoViewController.m in Sources */,
 				0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */,
 				F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */,
 				0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */,
 				F4DE0AC61F25BD3B0005F4CC /* BSLoginRegisterController.m in Sources */,
 				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
+				0E1A1F241F2CB7450004BB41 /* BSVoiceViewController.m in Sources */,
 				0E287B941F28D31600F3070B /* BSTextField.m in Sources */,
 				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
 				F46B21381F298C9F00A61C6C /* BSGuideView.m in Sources */,
+				0E1A1F2A1F2CB7680004BB41 /* BSWordViewController.m in Sources */,
 				0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,
