@@ -20,6 +20,7 @@
 		0E1A1F241F2CB7450004BB41 /* BSVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F231F2CB7450004BB41 /* BSVoiceViewController.m */; };
 		0E1A1F271F2CB75A0004BB41 /* BSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F261F2CB75A0004BB41 /* BSPictureViewController.m */; };
 		0E1A1F2A1F2CB7680004BB41 /* BSWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F291F2CB7680004BB41 /* BSWordViewController.m */; };
+		0E1DB6A31F2D77EE00EA31D2 /* BSWordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1DB6A21F2D77EE00EA31D2 /* BSWordModel.m */; };
 		0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */; };
 		0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E61F164FBF007C0D25 /* UIView+BSView.m */; };
 		0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E91F164FBF007C0D25 /* BSTabBar.m */; };
@@ -72,6 +73,8 @@
 		0E1A1F261F2CB75A0004BB41 /* BSPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureViewController.m; sourceTree = "<group>"; };
 		0E1A1F281F2CB7680004BB41 /* BSWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWordViewController.h; sourceTree = "<group>"; };
 		0E1A1F291F2CB7680004BB41 /* BSWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWordViewController.m; sourceTree = "<group>"; };
+		0E1DB6A11F2D77EE00EA31D2 /* BSWordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWordModel.h; sourceTree = "<group>"; };
+		0E1DB6A21F2D77EE00EA31D2 /* BSWordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWordModel.m; sourceTree = "<group>"; };
 		0E2288E31F164FBF007C0D25 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
 		0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
 		0E2288E51F164FBF007C0D25 /* UIView+BSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSView.h"; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 			children = (
 				0E178CC51F232A9200FC8815 /* BSRecommandTag.h */,
 				0E178CC61F232A9200FC8815 /* BSRecommandTag.m */,
+				0E1DB6A11F2D77EE00EA31D2 /* BSWordModel.h */,
+				0E1DB6A21F2D77EE00EA31D2 /* BSWordModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -555,6 +560,7 @@
 				0E287B941F28D31600F3070B /* BSTextField.m in Sources */,
 				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
 				F46B21381F298C9F00A61C6C /* BSGuideView.m in Sources */,
+				0E1DB6A31F2D77EE00EA31D2 /* BSWordModel.m in Sources */,
 				0E1A1F2A1F2CB7680004BB41 /* BSWordViewController.m in Sources */,
 				0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
