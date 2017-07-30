@@ -20,7 +20,7 @@
 		0E1A1F241F2CB7450004BB41 /* BSVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F231F2CB7450004BB41 /* BSVoiceViewController.m */; };
 		0E1A1F271F2CB75A0004BB41 /* BSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F261F2CB75A0004BB41 /* BSPictureViewController.m */; };
 		0E1A1F2A1F2CB7680004BB41 /* BSWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1A1F291F2CB7680004BB41 /* BSWordViewController.m */; };
-		0E1DB6A31F2D77EE00EA31D2 /* BSWordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1DB6A21F2D77EE00EA31D2 /* BSWordModel.m */; };
+		0E1DB6A31F2D77EE00EA31D2 /* BSTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1DB6A21F2D77EE00EA31D2 /* BSTopicModel.m */; };
 		0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */; };
 		0E2288FA1F164FBF007C0D25 /* UIView+BSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E61F164FBF007C0D25 /* UIView+BSView.m */; };
 		0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288E91F164FBF007C0D25 /* BSTabBar.m */; };
@@ -28,6 +28,8 @@
 		0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2288F01F164FBF007C0D25 /* BSEssenceViewController.m */; };
 		0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289021F164FD4007C0D25 /* BSMeViewController.m */; };
 		0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2289081F164FD4007C0D25 /* BSNewViewController.m */; };
+		0E27DB0F1F2DD853003C24D8 /* BSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E27DB0D1F2DD853003C24D8 /* BSTopicCell.m */; };
+		0E27DB101F2DD853003C24D8 /* BSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E27DB0E1F2DD853003C24D8 /* BSTopicCell.xib */; };
 		0E287B941F28D31600F3070B /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E287B931F28D31600F3070B /* BSTextField.m */; };
 		AA9C683D34C9D5AD809CD681 /* libPods-BaiSiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794295E919053EE028329934 /* libPods-BaiSiJie.a */; };
 		F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */; };
@@ -73,8 +75,8 @@
 		0E1A1F261F2CB75A0004BB41 /* BSPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureViewController.m; sourceTree = "<group>"; };
 		0E1A1F281F2CB7680004BB41 /* BSWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWordViewController.h; sourceTree = "<group>"; };
 		0E1A1F291F2CB7680004BB41 /* BSWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWordViewController.m; sourceTree = "<group>"; };
-		0E1DB6A11F2D77EE00EA31D2 /* BSWordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWordModel.h; sourceTree = "<group>"; };
-		0E1DB6A21F2D77EE00EA31D2 /* BSWordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWordModel.m; sourceTree = "<group>"; };
+		0E1DB6A11F2D77EE00EA31D2 /* BSTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicModel.h; sourceTree = "<group>"; };
+		0E1DB6A21F2D77EE00EA31D2 /* BSTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicModel.m; sourceTree = "<group>"; };
 		0E2288E31F164FBF007C0D25 /* UIBarButtonItem+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BSExtension.h"; sourceTree = "<group>"; };
 		0E2288E41F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BSExtension.m"; sourceTree = "<group>"; };
 		0E2288E51F164FBF007C0D25 /* UIView+BSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSView.h"; sourceTree = "<group>"; };
@@ -90,6 +92,9 @@
 		0E2289021F164FD4007C0D25 /* BSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeViewController.m; sourceTree = "<group>"; };
 		0E2289071F164FD4007C0D25 /* BSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewViewController.h; sourceTree = "<group>"; };
 		0E2289081F164FD4007C0D25 /* BSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewViewController.m; sourceTree = "<group>"; };
+		0E27DB0C1F2DD853003C24D8 /* BSTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicCell.h; sourceTree = "<group>"; };
+		0E27DB0D1F2DD853003C24D8 /* BSTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicCell.m; sourceTree = "<group>"; };
+		0E27DB0E1F2DD853003C24D8 /* BSTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicCell.xib; sourceTree = "<group>"; };
 		0E287B921F28D31600F3070B /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
 		0E287B931F28D31600F3070B /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
 		794295E919053EE028329934 /* libPods-BaiSiJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,8 +250,8 @@
 			children = (
 				0E178CC51F232A9200FC8815 /* BSRecommandTag.h */,
 				0E178CC61F232A9200FC8815 /* BSRecommandTag.m */,
-				0E1DB6A11F2D77EE00EA31D2 /* BSWordModel.h */,
-				0E1DB6A21F2D77EE00EA31D2 /* BSWordModel.m */,
+				0E1DB6A11F2D77EE00EA31D2 /* BSTopicModel.h */,
+				0E1DB6A21F2D77EE00EA31D2 /* BSTopicModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +262,9 @@
 				0E178CC81F232AE200FC8815 /* BSRecommandTagCell.h */,
 				0E178CC91F232AE200FC8815 /* BSRecommandTagCell.m */,
 				0E178CCA1F232AE200FC8815 /* BSRecommandTagCell.xib */,
+				0E27DB0C1F2DD853003C24D8 /* BSTopicCell.h */,
+				0E27DB0D1F2DD853003C24D8 /* BSTopicCell.m */,
+				0E27DB0E1F2DD853003C24D8 /* BSTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +480,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E27DB101F2DD853003C24D8 /* BSTopicCell.xib in Resources */,
 				F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */,
 				F401C8001F1CB87600AF6FC0 /* BSRecommendController.xib in Resources */,
 				0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */,
@@ -560,11 +569,12 @@
 				0E287B941F28D31600F3070B /* BSTextField.m in Sources */,
 				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
 				F46B21381F298C9F00A61C6C /* BSGuideView.m in Sources */,
-				0E1DB6A31F2D77EE00EA31D2 /* BSWordModel.m in Sources */,
+				0E1DB6A31F2D77EE00EA31D2 /* BSTopicModel.m in Sources */,
 				0E1A1F2A1F2CB7680004BB41 /* BSWordViewController.m in Sources */,
 				0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,
+				0E27DB0F1F2DD853003C24D8 /* BSTopicCell.m in Sources */,
 				F401C8031F1CBA4D00AF6FC0 /* BSRecommandCategory.m in Sources */,
 				0E178CCB1F232AE200FC8815 /* BSRecommandTagCell.m in Sources */,
 				0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */,

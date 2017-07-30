@@ -6,8 +6,8 @@
 //  Copyright © 2017年 郑雪利. All rights reserved.
 //
 
-#import "BSWordModel.h"
+#import "BSTopicModel.h"
 
-@implementation BSWordModel
+@implementation BSTopicModel
 
 @end

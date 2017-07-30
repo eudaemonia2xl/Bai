@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BSWordModel : NSObject
+@interface BSTopicModel : NSObject
 
 //头像的图片url地址
 @property (copy, nonatomic) NSString *profile_image;
 
 //发帖人的昵称
-@property (copy, nonatomic) NSString *screen_name;
+@property (copy, nonatomic) NSString *name;
 
 //转发的数量
 @property (copy, nonatomic) NSString *repost;
@@ -26,7 +26,7 @@
 @property (copy, nonatomic) NSString *cai;
 
 //收藏量
-@property (copy, nonatomic) NSString *love;
+@property (copy, nonatomic) NSString *ding;
 
 //帖子的被评论数量
 @property (copy, nonatomic) NSString *comment;
@@ -36,5 +36,8 @@
 
 //帖子的标签备注
 @property (copy, nonatomic) NSString *tag;
+
+//系统审核通过后创建帖子的时间
+@property (copy, nonatomic) NSString *created_at;
 
 @end

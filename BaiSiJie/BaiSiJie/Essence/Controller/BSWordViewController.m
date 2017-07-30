@@ -7,7 +7,8 @@
 //
 
 #import "BSWordViewController.h"
-#import "BSWordModel.h"
+#import "BSTopicModel.h"
+#import "BSTopicCell.h"
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>
@@ -28,12 +29,22 @@
 
 @end
 
+static NSString *topicID = @"BSTopicCell";
 @implementation BSWordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupTableView];
+    
     [self setupRefresh];
+}
+
+- (void)setupTableView
+{
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSTopicCell class]) bundle:nil] forCellReuseIdentifier:topicID];
 }
 
 #pragma mark - 添加header/footer的刷新控件，加载最新、更多数据
@@ -75,7 +86,7 @@
         
         //字典 -> 模型数组
         self.maxtime = responseObject[@"info"][@"maxtime"];
-        NSArray *wordArray = [BSWordModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        NSArray *wordArray = [BSTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         //保存到数据源数组中
         [self.wordsArray addObjectsFromArray:wordArray];
@@ -119,7 +130,7 @@
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
         //字典 -> 模型数组
-        NSArray *wordArray = [BSWordModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        NSArray *wordArray = [BSTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         //保存到数据源数组中
         [self.wordsArray addObjectsFromArray:wordArray];
@@ -149,19 +160,20 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identify = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identify];
-    }
-    BSWordModel *model = self.wordsArray[indexPath.row];
+    BSTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:topicID forIndexPath:indexPath];
     
-    cell.textLabel.text = model.screen_name;
-    cell.detailTextLabel.text = model.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    BSTopicModel *topic = self.wordsArray[indexPath.row];
+    
+    cell.topic = topic;
     
     return cell;
+}
+
+#pragma mark - 代理方法
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200;
 }
 
 - (NSMutableArray *)wordsArray
