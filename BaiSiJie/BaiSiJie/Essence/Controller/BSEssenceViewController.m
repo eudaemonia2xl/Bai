@@ -8,11 +8,7 @@
 
 #import "BSEssenceViewController.h"
 #import "BSRecommandTagViewController.h"
-#import "BSAllViewController.h"
-#import "BSVideoViewController.h"
-#import "BSVoiceViewController.h"
-#import "BSPictureViewController.h"
-#import "BSWordViewController.h"
+#import "BSTopicViewController.h"
 
 @interface BSEssenceViewController ()<UIScrollViewDelegate>
 
@@ -78,17 +74,16 @@
     [bgView addSubview:indicatorView];
     
     //创建按钮
-    NSArray *titles = @[@"全部全部",@"视频",@"声音",@"图片",@"段子"];
     CGFloat titleBtnX = 0;
     CGFloat titleBtnY = 0;
     CGFloat titleBtnW = bgView.width / 5;
     CGFloat titleBtnH = bgView.height - 5;
-    for (NSInteger i = 0; i < titles.count; i++) {
+    for (NSInteger i = 0; i < self.childViewControllers.count; i++) {
         UIButton *titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         titleBtnX = titleBtnW * i;
         titleBtn.tag = (i + 1) * 10;
         titleBtn.frame = CGRectMake(titleBtnX, titleBtnY, titleBtnW, titleBtnH);
-        [titleBtn setTitle:titles[i] forState:UIControlStateNormal];
+        [titleBtn setTitle:self.childViewControllers[i].title forState:UIControlStateNormal];
         [titleBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [titleBtn setTitleColor:[[UIColor redColor] colorWithAlphaComponent:0.7] forState:UIControlStateDisabled];
         [titleBtn addTarget:self action:@selector(tabBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -130,19 +125,29 @@
 //添加子控制器
 - (void)addChildVCs
 {
-    BSAllViewController *all = [[BSAllViewController alloc] init];
+    BSTopicViewController *all = [[BSTopicViewController alloc] init];
+    all.type = BSTopicTypeALL;
+    all.title = @"全部";
     [self addChildViewController:all];
     
-    BSVideoViewController *video = [[BSVideoViewController alloc] init];
+    BSTopicViewController *video = [[BSTopicViewController alloc] init];
+    video.type = BSTopicTypeVideo;
+    video.title = @"视频";
     [self addChildViewController:video];
     
-    BSVoiceViewController *voice = [[BSVoiceViewController alloc] init];
+    BSTopicViewController *voice = [[BSTopicViewController alloc] init];
+    voice.type = BSTopicTypeVoice;
+    voice.title = @"音频";
     [self addChildViewController:voice];
     
-    BSPictureViewController *picture = [[BSPictureViewController alloc] init];
+    BSTopicViewController *picture = [[BSTopicViewController alloc] init];
+    picture.type = BSTopicTypePicture;
+    picture.title = @"图片";
     [self addChildViewController:picture];
     
-    BSWordViewController *word = [[BSWordViewController alloc] init];
+    BSTopicViewController *word = [[BSTopicViewController alloc] init];
+    word.type = BSTopicTypeWord;
+    word.title = @"段子";
     [self addChildViewController:word];
 }
 
@@ -162,7 +167,7 @@
     //scrollView滚动
     CGPoint offset = self.contentScrollView.contentOffset;
     offset.x = self.view.width * (sender.tag / 10 - 1);
-//    self.contentScrollView.contentOffset = offset;
+//    self.contentScrollView.contentOffset = offset; 不对
     //只有这么设置scrollView的contentOffset，才会走scrollView的scrollViewDidEndScrollingAnimation代理方法
     [self.contentScrollView setContentOffset:offset animated:YES];
 }
@@ -181,18 +186,21 @@
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     
     //取出子控制器
-    UITableViewController *tableVC = self.childViewControllers[index];
-    tableVC.view.frame = CGRectMake(scrollView.contentOffset.x, 0, self.view.width, scrollView.height);
+    UIViewController *vc = self.childViewControllers[index];
+    vc.view.frame = CGRectMake(scrollView.contentOffset.x, 0, self.view.width, scrollView.height);
     
-    //设置tableView的内边距
-    CGFloat top = CGRectGetMaxY(self.bgView.frame);
+    [scrollView addSubview:vc.view];
+}
 
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    tableVC.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self scrollViewDidEndScrollingAnimation:scrollView];
     
-    // 设置滚动条的内边距
-    tableVC.tableView.scrollIndicatorInsets = tableVC.tableView.contentInset;
-    [scrollView addSubview:tableVC.view];
+    // 点击按钮
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    
+    UIButton *btn = [self.bgView viewWithTag:((index + 1) * 10)];
+    [self tabBtnClick:btn];
 }
 
 - (void)didReceiveMemoryWarning {

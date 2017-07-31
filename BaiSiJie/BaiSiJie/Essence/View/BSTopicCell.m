@@ -38,21 +38,13 @@
     
     self.nameLabel.text = topic.name;
     
+    //对于时间的处理，封装在create_at的get方法里，这里获取到的直接是处理完好的时间样式
     self.creatTimeLabel.text = topic.created_at;
 
     [self setupButton:self.dingBtn count:topic.ding placeHolder:@"顶"];
     [self setupButton:self.caiBtn count:topic.cai placeHolder:@"踩"];
     [self setupButton:self.repostBtn count:topic.repost placeHolder:@"转发"];
     [self setupButton:self.commentBtn count:topic.comment placeHolder:@"评论"];
-}
-
-- (void)setupCreatTime:(NSString *)created_at
-{
-    NSDate *now = [NSDate date];
-    
-    NSCalendar *cal = [NSCalendar currentCalendar];
-    
-    
 }
 
 /**

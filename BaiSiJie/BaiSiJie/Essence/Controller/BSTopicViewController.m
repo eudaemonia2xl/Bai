@@ -1,12 +1,12 @@
 //
-//  BSWordViewController.m
+//  BSTopicViewController.m
 //  BaiSiJie
 //
 //  Created by 郑雪利 on 2017/7/29.
 //  Copyright © 2017年 郑雪利. All rights reserved.
 //
 
-#import "BSWordViewController.h"
+#import "BSTopicViewController.h"
 #import "BSTopicModel.h"
 #import "BSTopicCell.h"
 #import <AFNetworking.h>
@@ -14,7 +14,7 @@
 #import <MJExtension.h>
 #import <MJRefresh.h>
 
-@interface BSWordViewController ()
+@interface BSTopicViewController ()
 
 //数据源数组，放段子数据
 @property (strong, nonatomic) NSMutableArray *wordsArray;
@@ -30,7 +30,7 @@
 @end
 
 static NSString *topicID = @"BSTopicCell";
-@implementation BSWordViewController
+@implementation BSTopicViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +44,15 @@ static NSString *topicID = @"BSTopicCell";
 {
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    //设置tableView的内边距
+    CGFloat top = CGRectGetMaxY(self.navigationController.navigationBar.frame) + 44;
+    
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    
+    // 设置滚动条的内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BSTopicCell class]) bundle:nil] forCellReuseIdentifier:topicID];
 }
 
@@ -71,7 +80,7 @@ static NSString *topicID = @"BSTopicCell";
     _currentPage = 0;
     NSDictionary *params = @{@"a":@"list",
                              @"c":@"data",
-                             @"type":@(29)
+                             @"type":@(self.type)
                              };
     self.params = params;
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -117,7 +126,7 @@ static NSString *topicID = @"BSTopicCell";
     }
     NSDictionary *params = @{@"a":@"list",
                              @"c":@"data",
-                             @"type":@(29),
+                             @"type":@(self.type),
                              @"page":@(_currentPage),
                              @"maxtime":self.maxtime};
     self.params = params;
@@ -149,7 +158,7 @@ static NSString *topicID = @"BSTopicCell";
         //结束刷新
         [self.tableView.mj_footer endRefreshing];
     }];
-
+    
 }
 
 #pragma mark - Table view data source
