@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="207"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="206.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6ok-X7-GCI">
@@ -141,6 +141,13 @@
                             <constraint firstItem="oeh-cI-Si9" firstAttribute="height" secondItem="dqZ-1R-XM6" secondAttribute="height" id="xz6-Tp-EzO"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="m1E-qK-g29">
+                        <rect key="frame" x="46" y="46" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="A8G-wB-jvS"/>
+                            <constraint firstAttribute="width" constant="14" id="VKg-Sr-o0u"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="c7k-9K-Bwy" firstAttribute="leading" secondItem="6ok-X7-GCI" secondAttribute="trailing" constant="8" id="2kt-0J-7dA"/>
@@ -148,6 +155,8 @@
                     <constraint firstAttribute="trailing" secondItem="xV5-5D-WRM" secondAttribute="trailing" constant="4" id="94V-DO-5xB"/>
                     <constraint firstItem="1v4-Wt-94u" firstAttribute="centerY" secondItem="6ok-X7-GCI" secondAttribute="centerY" id="SIp-5Y-xEL"/>
                     <constraint firstItem="c7k-9K-Bwy" firstAttribute="top" secondItem="6ok-X7-GCI" secondAttribute="top" id="XmV-xk-KIg"/>
+                    <constraint firstItem="m1E-qK-g29" firstAttribute="trailing" secondItem="6ok-X7-GCI" secondAttribute="trailing" constant="5" id="ba5-tI-gPq"/>
+                    <constraint firstItem="m1E-qK-g29" firstAttribute="bottom" secondItem="6ok-X7-GCI" secondAttribute="bottom" constant="5" id="iol-HH-4bS"/>
                     <constraint firstItem="xV5-5D-WRM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="p3z-xe-HZq"/>
                     <constraint firstItem="6ok-X7-GCI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="poX-Tx-Sc0"/>
                     <constraint firstItem="E2Z-it-u4l" firstAttribute="bottom" secondItem="6ok-X7-GCI" secondAttribute="bottom" id="r5w-9Q-TzV"/>
@@ -164,11 +173,13 @@
                 <outlet property="nameLabel" destination="c7k-9K-Bwy" id="gjd-TG-boc"/>
                 <outlet property="profileImageView" destination="6ok-X7-GCI" id="at1-wZ-zYR"/>
                 <outlet property="repostBtn" destination="oeh-cI-Si9" id="ccY-XM-sh0"/>
+                <outlet property="sineVImageView" destination="m1E-qK-g29" id="waz-4E-uTm"/>
             </connections>
-            <point key="canvasLocation" x="34" y="135.5"/>
+            <point key="canvasLocation" x="149" y="248"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
         <image name="cellFollowClickIcon" width="19" height="20"/>

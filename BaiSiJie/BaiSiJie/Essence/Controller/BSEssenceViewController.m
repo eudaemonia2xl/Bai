@@ -188,7 +188,8 @@
     //取出子控制器
     UIViewController *vc = self.childViewControllers[index];
     vc.view.frame = CGRectMake(scrollView.contentOffset.x, 0, self.view.width, scrollView.height);
-    
+    [(BSTopicViewController *)vc setupRefresh];
+
     [scrollView addSubview:vc.view];
 }
 

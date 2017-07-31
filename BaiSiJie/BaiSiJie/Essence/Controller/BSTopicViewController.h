@@ -21,4 +21,6 @@ typedef enum : NSUInteger {
 //创建的控制器类型
 @property (nonatomic, assign) BSTopicType type;
 
+- (void)setupRefresh;
+
 @end

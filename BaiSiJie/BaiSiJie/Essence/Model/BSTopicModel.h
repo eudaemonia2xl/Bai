@@ -40,4 +40,8 @@
 //系统审核通过后创建帖子的时间
 @property (copy, nonatomic) NSString *created_at;
 
+//是否是新浪会员
+@property (assign, nonatomic) BOOL sina_v;
+
+
 @end

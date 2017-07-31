@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *repostBtn;
 /** 评论 */
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *sineVImageView;
 
 @end
 @implementation BSTopicCell
@@ -33,6 +34,8 @@
 - (void)setTopic:(BSTopicModel *)topic
 {
     _topic = topic;
+    
+    self.sineVImageView.hidden = !topic.sina_v;
     
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
