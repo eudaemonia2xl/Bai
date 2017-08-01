@@ -27,6 +27,7 @@
 /** 评论 */
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *sineVImageView;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end
 @implementation BSTopicCell
@@ -40,6 +41,7 @@
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
     self.nameLabel.text = topic.name;
+    self.contentLabel.text = topic.text;
     
     //对于时间的处理，封装在create_at的get方法里，这里获取到的直接是处理完好的时间样式
     self.creatTimeLabel.text = topic.created_at;

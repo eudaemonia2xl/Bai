@@ -182,7 +182,9 @@ static NSString *topicID = @"BSTopicCell";
 #pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    BSTopicModel *topic = self.wordsArray[indexPath.row];
+    
+    return topic.cellHeight;
 }
 
 - (NSMutableArray *)wordsArray

@@ -57,7 +57,18 @@
     }else {//非今年
         return _created_at;
     }
+}
 
+- (CGFloat)cellHeight
+{
+    if (!_cellHeight) {
+        CGFloat contentLabelY = 65;
+        CGFloat toolBarH = 44;
+        CGFloat contentLabelW = [UIScreen mainScreen].bounds.size.width - 40;
+        CGFloat contentLabelH = [_text boundingRectWithSize:CGSizeMake(contentLabelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+        _cellHeight = contentLabelY + toolBarH + contentLabelH + 20 + self.height;
+    }
+    return _cellHeight;
 }
 
 @end

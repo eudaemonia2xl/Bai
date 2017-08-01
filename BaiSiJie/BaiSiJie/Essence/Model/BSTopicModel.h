@@ -41,7 +41,16 @@
 @property (copy, nonatomic) NSString *created_at;
 
 //是否是新浪会员
-@property (assign, nonatomic) BOOL sina_v;
+@property (assign, nonatomic, getter=isSina_v) BOOL sina_v;
 
+//图片或视频等其他的内容的高度
+@property (assign, nonatomic) CGFloat height;
+
+//视频或图片类型帖子的宽度
+@property (assign, nonatomic) CGFloat width;
+
+/****** 辅助属性 ******/
+//cell高度
+@property (nonatomic, assign) CGFloat cellHeight;
 
 @end
