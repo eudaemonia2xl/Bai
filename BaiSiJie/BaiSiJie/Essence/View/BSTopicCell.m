@@ -8,6 +8,7 @@
 
 #import "BSTopicCell.h"
 #import "BSTopicModel.h"
+#import "BSPictureView.h"
 #import <UIImageView+WebCache.h>
 
 @interface BSTopicCell ()
@@ -29,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sineVImageView;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
+@property (weak, nonatomic) BSPictureView *pictureView;
+
 @end
 @implementation BSTopicCell
 
@@ -42,6 +45,11 @@
     
     self.nameLabel.text = topic.name;
     self.contentLabel.text = topic.text;
+    
+    if (topic.type == BSTopicTypePicture) {
+        self.pictureView.topic = topic;
+        self.pictureView.frame = CGRectMake(0, 0, 0, 0);
+    }
     
     //对于时间的处理，封装在create_at的get方法里，这里获取到的直接是处理完好的时间样式
     self.creatTimeLabel.text = topic.created_at;
@@ -70,7 +78,7 @@
  */
 - (void)setFrame:(CGRect)frame
 {
-    CGFloat margin = 8;
+    CGFloat margin = 10;
     frame.origin.x = margin;
     frame.size.width -= margin * 2;
     frame.origin.y += margin;
@@ -84,6 +92,15 @@
     UIImageView *bgImageView = [[UIImageView alloc] init];
     bgImageView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgImageView;
+}
+
+- (BSPictureView *)pictureView
+{
+    if (!_pictureView) {
+        _pictureView = [BSPictureView pictureView];
+        [self.contentView addSubview:_pictureView];
+    }
+    return _pictureView;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

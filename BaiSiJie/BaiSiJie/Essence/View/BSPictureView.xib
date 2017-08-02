@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BSPictureView">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="206"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a8E-b3-6I9">
+                    <rect key="frame" x="0.0" y="0.0" width="338" height="206"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="h3q-LK-yMf">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Bmp-iM-6kv"/>
+                        <constraint firstAttribute="width" constant="31" id="UqU-bt-8nV"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPN-ui-Izw">
+                    <rect key="frame" x="0.0" y="162" width="338" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="INa-pB-nO3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="查看大图" image="see-big-picture"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="a8E-b3-6I9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1WL-ZC-olm"/>
+                <constraint firstAttribute="bottom" secondItem="a8E-b3-6I9" secondAttribute="bottom" id="CPh-lQ-tCU"/>
+                <constraint firstItem="h3q-LK-yMf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ECo-sb-Y0w"/>
+                <constraint firstItem="h3q-LK-yMf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HkU-Q4-c3x"/>
+                <constraint firstItem="OPN-ui-Izw" firstAttribute="trailing" secondItem="a8E-b3-6I9" secondAttribute="trailing" id="bfZ-nV-Ncn"/>
+                <constraint firstItem="OPN-ui-Izw" firstAttribute="bottom" secondItem="a8E-b3-6I9" secondAttribute="bottom" id="kfE-Bj-agO"/>
+                <constraint firstAttribute="trailing" secondItem="a8E-b3-6I9" secondAttribute="trailing" id="lhH-KU-oEU"/>
+                <constraint firstItem="a8E-b3-6I9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="poX-SL-ejA"/>
+                <constraint firstItem="OPN-ui-Izw" firstAttribute="leading" secondItem="a8E-b3-6I9" secondAttribute="leading" id="rZl-jV-K2F"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgImageView" destination="a8E-b3-6I9" id="Bdt-qe-1V1"/>
+                <outlet property="gifImageView" destination="h3q-LK-yMf" id="NZp-qR-g5q"/>
+                <outlet property="seeBigBtn" destination="OPN-ui-Izw" id="4BG-jW-HUf"/>
+            </connections>
+            <point key="canvasLocation" x="15" y="-177"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="see-big-picture" width="19" height="19"/>
+    </resources>
+</document>

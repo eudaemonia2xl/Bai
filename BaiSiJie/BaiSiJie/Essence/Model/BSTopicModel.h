@@ -49,6 +49,14 @@
 //视频或图片类型帖子的宽度
 @property (assign, nonatomic) CGFloat width;
 
+//	string	显示在页面中的视频图片的url
+@property (nonatomic, copy) NSString *small_image;
+@property (nonatomic, copy) NSString *middle_image;
+@property (nonatomic, copy) NSString *large_image;
+
+//帖子类型 帖子的类型，1为全部 10为图片 29为段子 31为音频 41为视频*/
+@property (nonatomic, assign) BSTopicType type;
+
 /****** 辅助属性 ******/
 //cell高度
 @property (nonatomic, assign) CGFloat cellHeight;

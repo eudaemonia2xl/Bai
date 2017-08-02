@@ -8,9 +8,17 @@
 
 #import "BSTopicModel.h"
 #import "NSDate+BSExtension.h"
+#import "MJExtension.h"
 
 @implementation BSTopicModel
 
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"small_image":@"image0",
+             @"middle_image":@"image1",
+             @"large_image":@"image2"
+             };
+}
 
 /**
  今年
@@ -62,11 +70,14 @@
 - (CGFloat)cellHeight
 {
     if (!_cellHeight) {
-        CGFloat contentLabelY = 65;
-        CGFloat toolBarH = 44;
-        CGFloat contentLabelW = [UIScreen mainScreen].bounds.size.width - 40;
+        CGFloat contentLabelW = [UIScreen mainScreen].bounds.size.width - 4 * BSTopicCellMargin;
         CGFloat contentLabelH = [_text boundingRectWithSize:CGSizeMake(contentLabelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
-        _cellHeight = contentLabelY + toolBarH + contentLabelH + 20 + self.height;
+        if (self.type == BSTopicTypePicture) {
+            CGFloat pictureW = contentLabelW;
+            CGFloat pictureH = pictureW * (self.height / self.width);
+            
+        }
+        _cellHeight = BStopicCellTextY + BSTopicCellBottomBarH + contentLabelH + 2 * BSTopicCellMargin + self.height;
     }
     return _cellHeight;
 }

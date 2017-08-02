@@ -45,6 +45,9 @@
 		F476E3421F2F26D40000CCD8 /* BSTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F476E3411F2F26D40000CCD8 /* BSTopicViewController.m */; };
 		F4DE0AC61F25BD3B0005F4CC /* BSLoginRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DE0AC41F25BD3B0005F4CC /* BSLoginRegisterController.m */; };
 		F4DE0AC71F25BD3B0005F4CC /* BSLoginRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4DE0AC51F25BD3B0005F4CC /* BSLoginRegisterController.xib */; };
+		F4EF6A481F31960A00730559 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EF6A471F31960A00730559 /* BSConst.m */; };
+		F4EF6A4B1F319D8100730559 /* BSPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EF6A4A1F319D8100730559 /* BSPictureView.m */; };
+		F4EF6A4D1F319D9100730559 /* BSPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4EF6A4C1F319D9100730559 /* BSPictureView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +118,11 @@
 		F4DE0AC31F25BD3B0005F4CC /* BSLoginRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLoginRegisterController.h; sourceTree = "<group>"; };
 		F4DE0AC41F25BD3B0005F4CC /* BSLoginRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLoginRegisterController.m; sourceTree = "<group>"; };
 		F4DE0AC51F25BD3B0005F4CC /* BSLoginRegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSLoginRegisterController.xib; sourceTree = "<group>"; };
+		F4EF6A461F31960A00730559 /* BSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSConst.h; sourceTree = "<group>"; };
+		F4EF6A471F31960A00730559 /* BSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSConst.m; sourceTree = "<group>"; };
+		F4EF6A491F319D8100730559 /* BSPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureView.h; sourceTree = "<group>"; };
+		F4EF6A4A1F319D8100730559 /* BSPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureView.m; sourceTree = "<group>"; };
+		F4EF6A4C1F319D9100730559 /* BSPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPictureView.xib; sourceTree = "<group>"; };
 		FC278EC2E9FA8986C2349F5E /* Pods-BaiSiJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiJie/Pods-BaiSiJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +194,8 @@
 				0E2288E61F164FBF007C0D25 /* UIView+BSView.m */,
 				F476E33D1F2EF3ED0000CCD8 /* NSDate+BSExtension.h */,
 				F476E33E1F2EF3ED0000CCD8 /* NSDate+BSExtension.m */,
+				F4EF6A461F31960A00730559 /* BSConst.h */,
+				F4EF6A471F31960A00730559 /* BSConst.m */,
 			);
 			name = "Category(分类)";
 			path = Category;
@@ -250,6 +260,9 @@
 				0E27DB0C1F2DD853003C24D8 /* BSTopicCell.h */,
 				0E27DB0D1F2DD853003C24D8 /* BSTopicCell.m */,
 				0E27DB0E1F2DD853003C24D8 /* BSTopicCell.xib */,
+				F4EF6A491F319D8100730559 /* BSPictureView.h */,
+				F4EF6A4A1F319D8100730559 /* BSPictureView.m */,
+				F4EF6A4C1F319D9100730559 /* BSPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -474,6 +487,7 @@
 				F430A7461F1DD25D005FD2ED /* BSCategoryCell.xib in Resources */,
 				F4DE0AC71F25BD3B0005F4CC /* BSLoginRegisterController.xib in Resources */,
 				F430A74B1F1DF6BE005FD2ED /* BSUserCell.xib in Resources */,
+				F4EF6A4D1F319D9100730559 /* BSPictureView.xib in Resources */,
 				0E178CCC1F232AE200FC8815 /* BSRecommandTagCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EF6A4B1F319D8100730559 /* BSPictureView.m in Sources */,
 				0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */,
 				F430A7451F1DD25D005FD2ED /* BSCategoryCell.m in Sources */,
 				0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */,
@@ -545,6 +560,7 @@
 				F476E33F1F2EF3ED0000CCD8 /* NSDate+BSExtension.m in Sources */,
 				0E2288FC1F164FBF007C0D25 /* BSTabBarViewController.m in Sources */,
 				0E22890C1F164FD4007C0D25 /* BSNewViewController.m in Sources */,
+				F4EF6A481F31960A00730559 /* BSConst.m in Sources */,
 				F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */,
 				0E2288FD1F164FBF007C0D25 /* BSEssenceViewController.m in Sources */,
 				F4DE0AC61F25BD3B0005F4CC /* BSLoginRegisterController.m in Sources */,

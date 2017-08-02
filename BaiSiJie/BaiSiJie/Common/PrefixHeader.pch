@@ -11,6 +11,7 @@
 
 #import "UIView+BSView.h"
 #import "UIBarButtonItem+BSExtension.h"
+#import "BSConst.h"
 
 #ifdef DEBUG
 #define DLog(...) NSLog(__VA_ARGS__)
