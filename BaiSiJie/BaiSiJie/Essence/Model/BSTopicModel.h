@@ -61,4 +61,7 @@
 //cell高度
 @property (nonatomic, assign) CGFloat cellHeight;
 
+//图片的frame
+@property (assign, nonatomic) CGRect pictureF;
+
 @end

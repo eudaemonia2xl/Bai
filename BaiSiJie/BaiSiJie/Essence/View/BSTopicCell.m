@@ -46,9 +46,9 @@
     self.nameLabel.text = topic.name;
     self.contentLabel.text = topic.text;
     
-    if (topic.type == BSTopicTypePicture) {
+    if (topic.type == BSTopicTypePicture) { //图片帖子
         self.pictureView.topic = topic;
-        self.pictureView.frame = CGRectMake(0, 0, 0, 0);
+        self.pictureView.frame = topic.pictureF;
     }
     
     //对于时间的处理，封装在create_at的get方法里，这里获取到的直接是处理完好的时间样式
@@ -97,8 +97,9 @@
 - (BSPictureView *)pictureView
 {
     if (!_pictureView) {
-        _pictureView = [BSPictureView pictureView];
-        [self.contentView addSubview:_pictureView];
+        BSPictureView *pictureView = [BSPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
     }
     return _pictureView;
 }

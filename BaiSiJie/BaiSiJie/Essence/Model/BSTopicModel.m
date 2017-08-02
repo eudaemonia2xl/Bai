@@ -72,12 +72,19 @@
     if (!_cellHeight) {
         CGFloat contentLabelW = [UIScreen mainScreen].bounds.size.width - 4 * BSTopicCellMargin;
         CGFloat contentLabelH = [_text boundingRectWithSize:CGSizeMake(contentLabelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
-        if (self.type == BSTopicTypePicture) {
+        
+        //文字的高度
+        _cellHeight = BStopicCellTextY + contentLabelH + BSTopicCellMargin;
+        
+        if (self.type == BSTopicTypePicture) {//图片帖子
             CGFloat pictureW = contentLabelW;
-            CGFloat pictureH = pictureW * (self.height / self.width);
-            
+            CGFloat pictureH = pictureW * self.height / self.width;
+            CGFloat pictureX = BSTopicCellMargin;
+            CGFloat pictureY = BStopicCellTextY + contentLabelH + BSTopicCellMargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            _cellHeight += pictureH + BSTopicCellMargin;
         }
-        _cellHeight = BStopicCellTextY + BSTopicCellBottomBarH + contentLabelH + 2 * BSTopicCellMargin + self.height;
+         _cellHeight += BSTopicCellBottomBarH + BSTopicCellMargin;
     }
     return _cellHeight;
 }
