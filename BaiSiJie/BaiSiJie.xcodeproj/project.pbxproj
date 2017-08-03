@@ -11,6 +11,8 @@
 		0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E13DC0C1F0E6C7C00C81D2D /* AppDelegate.m */; };
 		0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */; };
 		0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E13DC161F0E6C7C00C81D2D /* LaunchScreen.storyboard */; };
+		0E154B611F3368FB00861A99 /* BSShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E154B5F1F3368FB00861A99 /* BSShowPictureViewController.m */; };
+		0E154B621F3368FB00861A99 /* BSShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E154B601F3368FB00861A99 /* BSShowPictureViewController.xib */; };
 		0E178CC41F23290E00FC8815 /* BSRecommandTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E178CC31F23290E00FC8815 /* BSRecommandTagViewController.m */; };
 		0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E178CC61F232A9200FC8815 /* BSRecommandTag.m */; };
 		0E178CCB1F232AE200FC8815 /* BSRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E178CC91F232AE200FC8815 /* BSRecommandTagCell.m */; };
@@ -58,6 +60,9 @@
 		0E13DC141F0E6C7C00C81D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E13DC171F0E6C7C00C81D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E13DC191F0E6C7C00C81D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E154B5E1F3368FB00861A99 /* BSShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSShowPictureViewController.h; sourceTree = "<group>"; };
+		0E154B5F1F3368FB00861A99 /* BSShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSShowPictureViewController.m; sourceTree = "<group>"; };
+		0E154B601F3368FB00861A99 /* BSShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSShowPictureViewController.xib; sourceTree = "<group>"; };
 		0E178CC21F23290E00FC8815 /* BSRecommandTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommandTagViewController.h; sourceTree = "<group>"; };
 		0E178CC31F23290E00FC8815 /* BSRecommandTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommandTagViewController.m; sourceTree = "<group>"; };
 		0E178CC51F232A9200FC8815 /* BSRecommandTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommandTag.h; sourceTree = "<group>"; };
@@ -236,6 +241,9 @@
 				0E178CC31F23290E00FC8815 /* BSRecommandTagViewController.m */,
 				F476E3401F2F26D40000CCD8 /* BSTopicViewController.h */,
 				F476E3411F2F26D40000CCD8 /* BSTopicViewController.m */,
+				0E154B5E1F3368FB00861A99 /* BSShowPictureViewController.h */,
+				0E154B5F1F3368FB00861A99 /* BSShowPictureViewController.m */,
+				0E154B601F3368FB00861A99 /* BSShowPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -479,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E27DB101F2DD853003C24D8 /* BSTopicCell.xib in Resources */,
+				0E154B621F3368FB00861A99 /* BSShowPictureViewController.xib in Resources */,
 				F401C7F21F1C653C00AF6FC0 /* BSFriendTrendsViewController.xib in Resources */,
 				F401C8001F1CB87600AF6FC0 /* BSRecommendController.xib in Resources */,
 				0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */,
@@ -566,6 +575,7 @@
 				F4DE0AC61F25BD3B0005F4CC /* BSLoginRegisterController.m in Sources */,
 				0E2288FB1F164FBF007C0D25 /* BSTabBar.m in Sources */,
 				0E287B941F28D31600F3070B /* BSTextField.m in Sources */,
+				0E154B611F3368FB00861A99 /* BSShowPictureViewController.m in Sources */,
 				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
 				F46B21381F298C9F00A61C6C /* BSGuideView.m in Sources */,
 				0E1DB6A31F2D77EE00EA31D2 /* BSTopicModel.m in Sources */,

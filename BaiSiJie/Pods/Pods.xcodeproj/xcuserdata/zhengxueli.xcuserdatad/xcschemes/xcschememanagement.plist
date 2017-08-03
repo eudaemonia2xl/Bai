@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DACircularProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0E88DCF2D9FAC5E4A14E7AF7545BB60E</key>
+		<key>16DD5740C55BD044A738A699842357DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C5F59E772420F90F9C2304577A51243</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83561B898511E6600C1227A35A636F30</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A4320DA2C427D1D2F56B3D611F3DCB1D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AC34B69CD22A083C5C5D53437B03B4B3</key>
+		<key>C791F0A928C1A8FE97074DFC9ACF4E75</key>
 		<dict>
 			<key>primary</key>
 			<true/>

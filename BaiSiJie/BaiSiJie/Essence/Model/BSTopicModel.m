@@ -80,9 +80,9 @@
             CGFloat pictureW = contentLabelW;
             CGFloat pictureH = pictureW * self.height / self.width;
             
-            if (self.height >= 1000) {
-                _bigPicture = YES;
-                pictureH = 250;
+            if (pictureH >= 1000) { //高度超过1000的大图
+                self.bigPicture = YES; //是大图
+                pictureH = 250; //超过1000的大图高度变为固定的250
             }
             
             CGFloat pictureX = BSTopicCellMargin;
