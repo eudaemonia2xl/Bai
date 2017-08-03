@@ -57,11 +57,17 @@
 //帖子类型 帖子的类型，1为全部 10为图片 29为段子 31为音频 41为视频*/
 @property (nonatomic, assign) BSTopicType type;
 
+//是否是gif动画
+@property (nonatomic, assign) BOOL is_gif;
+
 /****** 辅助属性 ******/
 //cell高度
 @property (nonatomic, assign) CGFloat cellHeight;
 
 //图片的frame
 @property (assign, nonatomic) CGRect pictureF;
+
+//是否是大图
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 
 @end

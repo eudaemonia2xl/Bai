@@ -79,6 +79,12 @@
         if (self.type == BSTopicTypePicture) {//图片帖子
             CGFloat pictureW = contentLabelW;
             CGFloat pictureH = pictureW * self.height / self.width;
+            
+            if (self.height >= 1000) {
+                _bigPicture = YES;
+                pictureH = 250;
+            }
+            
             CGFloat pictureX = BSTopicCellMargin;
             CGFloat pictureY = BStopicCellTextY + contentLabelH + BSTopicCellMargin;
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
