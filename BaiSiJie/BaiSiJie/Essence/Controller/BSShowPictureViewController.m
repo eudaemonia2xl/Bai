@@ -8,7 +8,9 @@
 
 #import "BSShowPictureViewController.h"
 #import "BSTopicModel.h"
+#import "DALabeledCircularProgressView.h"
 #import <UIImageView+WebCache.h>
+#import <SVProgressHUD.h>
 
 @interface BSShowPictureViewController ()
 
@@ -16,6 +18,7 @@
 @property (nonatomic, strong) UIImageView *bgImageView;
 //存放图片的scrollView
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
 
 @end
 
@@ -24,21 +27,25 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    _bgImageView = [[UIImageView alloc] init];
-    [self.scrollView addSubview:_bgImageView];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //屏幕尺寸
     CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
     CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
     
+    //添加图片
+    _bgImageView = [[UIImageView alloc] init];
+    _bgImageView.userInteractionEnabled = YES;
+    [self.scrollView addSubview:_bgImageView];
     [_bgImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back:)]];
     
+    //图片尺寸
     CGFloat pictureW = screenW;
     CGFloat pictureH = pictureW * self.topic.height / self.topic.width;
-    if (pictureH > screenW) {
+    if (pictureH > screenH) { // 图片显示高度超过一个屏幕, 需要滚动查看
         _bgImageView.frame = CGRectMake(0, 0, pictureW, pictureH);
         _scrollView.contentSize = CGSizeMake(0, pictureH);
     }else {
@@ -46,7 +53,16 @@
         _bgImageView.centerY = screenH * 0.5;
     }
     
-    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:_topic.large_image]];
+    //显示图片
+    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:_topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        
+        //设置进度条
+        [self.progressView setProgress:1.0 * receivedSize / EPERM animated:NO];
+        self.progressView.progressLabel.text = [NSString stringWithFormat:@"%.0ld%%",receivedSize / expectedSize * 100];
+        self.progressView.hidden = NO;
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.progressView.hidden = YES;
+    }];
 }
 
 /**
@@ -60,7 +76,18 @@
  * 保存按钮
  */
 - (IBAction)saveImage:(id)sender {
-    
+    //将图片保存到系统相册
+    UIImageWriteToSavedPhotosAlbum(self.bgImageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+//将图片保存到系统相册，系统建议调用的方法
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error) {
+        [SVProgressHUD showErrorWithStatus:@"保存图片失败！"];
+    } else {
+        [SVProgressHUD showSuccessWithStatus:@"保存图片成功！"];
+    }
 }
 
 /**

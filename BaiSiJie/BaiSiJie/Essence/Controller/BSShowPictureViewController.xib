@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSShowPictureViewController">
             <connections>
+                <outlet property="progressView" destination="Jzz-D1-ckQ" id="XCp-xR-JLJ"/>
                 <outlet property="scrollView" destination="zQO-XS-e3D" id="NDX-xa-VfV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,6 +25,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.66973458904109584" colorSpace="calibratedRGB"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-D1-ckQ" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="157" y="303" width="60" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="13J-8r-hbT"/>
+                        <constraint firstAttribute="height" constant="60" id="yzi-a5-uUc"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS1-gW-27n">
                     <rect key="frame" x="20" y="64" width="30" height="30"/>
                     <constraints>
@@ -66,6 +75,8 @@
                 <constraint firstAttribute="trailing" secondItem="ciU-RM-SuJ" secondAttribute="trailing" constant="20" id="7aG-rb-wm8"/>
                 <constraint firstItem="cor-r8-d44" firstAttribute="centerY" secondItem="ciU-RM-SuJ" secondAttribute="centerY" id="9so-v2-wA5"/>
                 <constraint firstItem="mS1-gW-27n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Co8-hT-hvT"/>
+                <constraint firstItem="Jzz-D1-ckQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="P8a-Sj-ycC"/>
+                <constraint firstItem="Jzz-D1-ckQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ppd-XC-cfr"/>
                 <constraint firstAttribute="bottom" secondItem="ciU-RM-SuJ" secondAttribute="bottom" constant="40" id="Tyo-E4-qQ3"/>
                 <constraint firstItem="cor-r8-d44" firstAttribute="height" secondItem="ciU-RM-SuJ" secondAttribute="height" id="UUK-Pq-b6m"/>
                 <constraint firstItem="mS1-gW-27n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Y4Y-7E-Pr1"/>

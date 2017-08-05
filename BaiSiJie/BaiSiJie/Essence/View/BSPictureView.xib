@@ -42,7 +42,7 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJc-Xl-jEs" customClass="DALabeledCircularProgressView">
                     <rect key="frame" x="129" y="63" width="80" height="80"/>
-                    <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="17i-OX-tYi"/>
                         <constraint firstAttribute="height" constant="80" id="plv-pV-wYS"/>
