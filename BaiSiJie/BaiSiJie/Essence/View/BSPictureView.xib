@@ -40,9 +40,9 @@
                     <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="查看大图" image="see-big-picture"/>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJc-Xl-jEs" customClass="DALabeledCircularProgressView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJc-Xl-jEs" customClass="BSProgressView">
                     <rect key="frame" x="129" y="63" width="80" height="80"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="0.81802353230000002" blue="0.26550000940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="17i-OX-tYi"/>
                         <constraint firstAttribute="height" constant="80" id="plv-pV-wYS"/>
@@ -71,7 +71,7 @@
             <connections>
                 <outlet property="bgImageView" destination="a8E-b3-6I9" id="Bdt-qe-1V1"/>
                 <outlet property="gifImageView" destination="h3q-LK-yMf" id="NZp-qR-g5q"/>
-                <outlet property="progressView" destination="tJc-Xl-jEs" id="gaT-fi-Wau"/>
+                <outlet property="progressView" destination="tJc-Xl-jEs" id="EMx-kg-FBd"/>
                 <outlet property="seeBigBtn" destination="OPN-ui-Izw" id="4BG-jW-HUf"/>
             </connections>
             <point key="canvasLocation" x="15" y="-177"/>

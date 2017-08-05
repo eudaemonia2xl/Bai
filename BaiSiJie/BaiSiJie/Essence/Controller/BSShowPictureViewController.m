@@ -8,7 +8,7 @@
 
 #import "BSShowPictureViewController.h"
 #import "BSTopicModel.h"
-#import "DALabeledCircularProgressView.h"
+#import "BSProgressView.h"
 #import <UIImageView+WebCache.h>
 #import <SVProgressHUD.h>
 
@@ -18,16 +18,11 @@
 @property (nonatomic, strong) UIImageView *bgImageView;
 //存放图片的scrollView
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
+@property (weak, nonatomic) IBOutlet BSProgressView *progressView;
 
 @end
 
 @implementation BSShowPictureViewController
-
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,15 +48,17 @@
         _bgImageView.centerY = screenH * 0.5;
     }
     
+    //防止图片下载过程中，用户点击图片，查看大图时，进度条能够接着点击之前的进度值显示
+    [self.progressView setProgress:self.topic.pictureProgress animated:YES];
+    DLog(@"%@",self.progressView);
     //显示图片
     [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:_topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
         //设置进度条
-        [self.progressView setProgress:1.0 * receivedSize / EPERM animated:NO];
-        self.progressView.progressLabel.text = [NSString stringWithFormat:@"%.0ld%%",receivedSize / expectedSize * 100];
-        self.progressView.hidden = NO;
+        [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:NO];
+
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        self.progressView.hidden = YES;
+//        self.progressView.hidden = YES;
     }];
 }
 

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BSTabBarViewController.h"
 #import "BSGuideView.h"
+#import "SDImageCache.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [[SDImageCache sharedImageCache] clearDisk];
+
     self.window = [[UIWindow alloc] init];
     
     self.window.frame = [UIScreen mainScreen].bounds;

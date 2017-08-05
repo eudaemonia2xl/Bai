@@ -70,7 +70,7 @@
 //是否是大图
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 
-//图片的当前进度
+//记录图片的当前进度
 @property (assign, nonatomic) CGFloat pictureProgress;
 
 @end

@@ -9,14 +9,14 @@
 #import "BSPictureView.h"
 #import "BSTopicModel.h"
 #import "BSShowPictureViewController.h"
-#import <DALabeledCircularProgressView.h>
+#import "BSProgressView.h"
 #import <UIImageView+WebCache.h>
 
 @interface BSPictureView ()
 
 @property (weak, nonatomic) IBOutlet UIButton *seeBigBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
-@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
+@property (weak, nonatomic) IBOutlet BSProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @end
 @implementation BSPictureView
@@ -29,9 +29,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-        
-    self.progressView.roundedCorners = 4;
-    self.progressView.progressLabel.textColor = [UIColor whiteColor];
     
     self.bgImageView.userInteractionEnabled = YES;
     [self.bgImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pictureTap)]];
@@ -56,11 +53,18 @@
 {
     _topic = topic;
     self.gifImageView.hidden = !topic.is_gif;
-//    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
+
+    // 立马显示最新的进度值(防止因为网速慢, 导致显示的是其他图片的下载进度)
+    [self.progressView setProgress:topic.pictureProgress animated:YES];
+    
+    //再次下载图片时，会自动调用block
+//    [self.bgImageView sd_cancelCurrentImageLoad];
+    
     [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        [self.progressView setProgress:receivedSize / expectedSize * 1 animated:YES];
-        self.progressView.progressLabel.text = [NSString stringWithFormat:@"%.0ld%%",receivedSize / expectedSize * 100];
-        self.progressView.hidden = NO;
+
+        topic.pictureProgress = 1.0 * receivedSize / expectedSize;
+        
+        [self.progressView setProgress:topic.pictureProgress animated:YES];
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
     }];

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BSShowPictureViewController">
             <connections>
-                <outlet property="progressView" destination="Jzz-D1-ckQ" id="XCp-xR-JLJ"/>
+                <outlet property="progressView" destination="Jzz-D1-ckQ" id="tZY-GK-cUz"/>
                 <outlet property="scrollView" destination="zQO-XS-e3D" id="NDX-xa-VfV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,12 +25,12 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.66973458904109584" colorSpace="calibratedRGB"/>
                 </scrollView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-D1-ckQ" customClass="DALabeledCircularProgressView">
-                    <rect key="frame" x="157" y="303" width="60" height="60"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzz-D1-ckQ" customClass="BSProgressView">
+                    <rect key="frame" x="147" y="293" width="80" height="80"/>
+                    <color key="backgroundColor" red="0.97516364990000004" green="1" blue="0.7273807082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="60" id="13J-8r-hbT"/>
-                        <constraint firstAttribute="height" constant="60" id="yzi-a5-uUc"/>
+                        <constraint firstAttribute="width" constant="80" id="13J-8r-hbT"/>
+                        <constraint firstAttribute="height" constant="80" id="yzi-a5-uUc"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS1-gW-27n">
