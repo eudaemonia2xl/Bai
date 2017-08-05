@@ -43,6 +43,7 @@
 - (void)pictureTap
 {
     BSShowPictureViewController *showPictureVC = [[BSShowPictureViewController alloc] init];
+    showPictureVC.topic = self.topic;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPictureVC animated:YES completion:nil];
 }
 

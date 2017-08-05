@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BSTopicModel;
 @interface BSShowPictureViewController : UIViewController
+
+//图片模型数据
+@property (nonatomic, strong) BSTopicModel *topic;
 
 @end
