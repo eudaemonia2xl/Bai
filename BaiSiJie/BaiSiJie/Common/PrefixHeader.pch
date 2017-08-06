@@ -21,4 +21,7 @@
 
 #define RGBColor(a,b,c) [UIColor colorWithRed:(a)/255.0 green:(a)/255.0 blue:(a)/255.0 alpha:1.0]
 
+#define BSScreenW [UIScreen mainScreen].bounds.size.width
+#define BSScreenH [UIScreen mainScreen].bounds.size.height
+
 #endif /* PrefixHeader_pch */

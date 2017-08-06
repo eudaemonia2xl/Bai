@@ -29,7 +29,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
+
     self.bgImageView.userInteractionEnabled = YES;
     [self.bgImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pictureTap)]];
 }
@@ -58,17 +58,18 @@
     [self.progressView setProgress:topic.pictureProgress animated:YES];
     
     //再次下载图片时，会自动调用block
-//    [self.bgImageView sd_cancelCurrentImageLoad];
-    
+    [self.bgImageView sd_cancelCurrentImageLoad];
+
+ 
     [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
 
         topic.pictureProgress = 1.0 * receivedSize / expectedSize;
         
         [self.progressView setProgress:topic.pictureProgress animated:YES];
+        self.progressView.hidden = NO;
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
     }];
-    
     
     if (topic.isBigPicture) {
         self.seeBigBtn.hidden = NO;

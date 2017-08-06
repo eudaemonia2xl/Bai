@@ -27,10 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //屏幕尺寸
-    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
-    
     //添加图片
     _bgImageView = [[UIImageView alloc] init];
     _bgImageView.userInteractionEnabled = YES;
@@ -38,19 +34,19 @@
     [_bgImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back:)]];
     
     //图片尺寸
-    CGFloat pictureW = screenW;
+    CGFloat pictureW = BSScreenW;
     CGFloat pictureH = pictureW * self.topic.height / self.topic.width;
-    if (pictureH > screenH) { // 图片显示高度超过一个屏幕, 需要滚动查看
+    if (pictureH > BSScreenH) { // 图片显示高度超过一个屏幕, 需要滚动查看
         _bgImageView.frame = CGRectMake(0, 0, pictureW, pictureH);
         _scrollView.contentSize = CGSizeMake(0, pictureH);
     }else {
         _bgImageView.size = CGSizeMake(pictureW, pictureH);
-        _bgImageView.centerY = screenH * 0.5;
+        _bgImageView.centerY = BSScreenH * 0.5;
     }
     
     //防止图片下载过程中，用户点击图片，查看大图时，进度条能够接着点击之前的进度值显示
     [self.progressView setProgress:self.topic.pictureProgress animated:YES];
-    DLog(@"%@",self.progressView);
+    
     //显示图片
     [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:_topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
@@ -58,7 +54,7 @@
         [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:NO];
 
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-//        self.progressView.hidden = YES;
+        self.progressView.hidden = YES;
     }];
 }
 

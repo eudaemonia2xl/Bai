@@ -51,19 +51,19 @@
             </subviews>
             <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="a8E-b3-6I9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1WL-ZC-olm"/>
-                <constraint firstAttribute="bottom" secondItem="a8E-b3-6I9" secondAttribute="bottom" id="CPh-lQ-tCU"/>
+                <constraint firstItem="a8E-b3-6I9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0nI-Ps-mMD"/>
+                <constraint firstItem="a8E-b3-6I9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1jK-tY-7fg"/>
                 <constraint firstItem="h3q-LK-yMf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ECo-sb-Y0w"/>
+                <constraint firstAttribute="bottom" secondItem="a8E-b3-6I9" secondAttribute="bottom" id="FNG-Ey-qd2"/>
                 <constraint firstItem="h3q-LK-yMf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HkU-Q4-c3x"/>
+                <constraint firstAttribute="trailing" secondItem="OPN-ui-Izw" secondAttribute="trailing" id="K8J-pd-Cyg"/>
                 <constraint firstItem="XZG-fM-Sn2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="QEU-ZS-yDL"/>
-                <constraint firstItem="OPN-ui-Izw" firstAttribute="trailing" secondItem="a8E-b3-6I9" secondAttribute="trailing" id="bfZ-nV-Ncn"/>
+                <constraint firstAttribute="trailing" secondItem="a8E-b3-6I9" secondAttribute="trailing" id="dUe-qs-Bgh"/>
                 <constraint firstItem="XZG-fM-Sn2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eYx-AB-Ggo"/>
                 <constraint firstItem="tJc-Xl-jEs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fRf-lX-yXf"/>
-                <constraint firstItem="OPN-ui-Izw" firstAttribute="bottom" secondItem="a8E-b3-6I9" secondAttribute="bottom" id="kfE-Bj-agO"/>
-                <constraint firstAttribute="trailing" secondItem="a8E-b3-6I9" secondAttribute="trailing" id="lhH-KU-oEU"/>
-                <constraint firstItem="a8E-b3-6I9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="poX-SL-ejA"/>
-                <constraint firstItem="OPN-ui-Izw" firstAttribute="leading" secondItem="a8E-b3-6I9" secondAttribute="leading" id="rZl-jV-K2F"/>
+                <constraint firstAttribute="bottom" secondItem="OPN-ui-Izw" secondAttribute="bottom" id="rJZ-5z-80p"/>
                 <constraint firstAttribute="trailing" secondItem="XZG-fM-Sn2" secondAttribute="trailing" id="sit-jK-gbQ"/>
+                <constraint firstItem="OPN-ui-Izw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="x2j-Er-tL7"/>
                 <constraint firstItem="tJc-Xl-jEs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zOd-T4-dCB"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

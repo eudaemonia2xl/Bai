@@ -7,6 +7,7 @@
 //
 
 #import "BSTabBar.h"
+#import "BSPublishViewController.h"
 
 @interface BSTabBar ()
 
@@ -24,11 +25,21 @@
         UIButton *publishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        [publishBtn addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         publishBtn.size = publishBtn.currentBackgroundImage.size;
         [self addSubview:publishBtn];
         self.publishBtn = publishBtn;
     }
     return self;
+}
+
+/**
+ * 发布按钮点击事件
+ */
+- (void)publishClick
+{
+    BSPublishViewController *publish = [[BSPublishViewController alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
 }
 
 //自定义控件第二步：重写layoutSubviews方法，对控件进行布局
