@@ -19,7 +19,7 @@
 //存放图片的scrollView
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet BSProgressView *progressView;
-
+ 
 @end
 
 @implementation BSShowPictureViewController
