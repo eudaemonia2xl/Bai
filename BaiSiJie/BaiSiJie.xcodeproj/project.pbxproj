@@ -33,6 +33,8 @@
 		0E287B941F28D31600F3070B /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E287B931F28D31600F3070B /* BSTextField.m */; };
 		0E41A2D21F3B32B600E5BCA9 /* BSVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E41A2D11F3B32B600E5BCA9 /* BSVoiceView.m */; };
 		0E41A2D41F3B32C400E5BCA9 /* BSVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E41A2D31F3B32C400E5BCA9 /* BSVoiceView.xib */; };
+		0E41A2D71F3B406B00E5BCA9 /* BSVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E41A2D61F3B406B00E5BCA9 /* BSVideoView.m */; };
+		0E41A2D91F3B407F00E5BCA9 /* BSVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E41A2D81F3B407F00E5BCA9 /* BSVideoView.xib */; };
 		0EDC09C21F3608C8000EB518 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC09C11F3608C8000EB518 /* BSProgressView.m */; };
 		AA9C683D34C9D5AD809CD681 /* libPods-BaiSiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794295E919053EE028329934 /* libPods-BaiSiJie.a */; };
 		F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */; };
@@ -106,6 +108,9 @@
 		0E41A2D01F3B32B600E5BCA9 /* BSVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVoiceView.h; sourceTree = "<group>"; };
 		0E41A2D11F3B32B600E5BCA9 /* BSVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVoiceView.m; sourceTree = "<group>"; };
 		0E41A2D31F3B32C400E5BCA9 /* BSVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSVoiceView.xib; sourceTree = "<group>"; };
+		0E41A2D51F3B406B00E5BCA9 /* BSVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVideoView.h; sourceTree = "<group>"; };
+		0E41A2D61F3B406B00E5BCA9 /* BSVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVideoView.m; sourceTree = "<group>"; };
+		0E41A2D81F3B407F00E5BCA9 /* BSVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSVideoView.xib; sourceTree = "<group>"; };
 		0EDC09C01F3608C8000EB518 /* BSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSProgressView.h; sourceTree = "<group>"; };
 		0EDC09C11F3608C8000EB518 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
 		794295E919053EE028329934 /* libPods-BaiSiJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +295,9 @@
 				0E41A2D01F3B32B600E5BCA9 /* BSVoiceView.h */,
 				0E41A2D11F3B32B600E5BCA9 /* BSVoiceView.m */,
 				0E41A2D31F3B32C400E5BCA9 /* BSVoiceView.xib */,
+				0E41A2D51F3B406B00E5BCA9 /* BSVideoView.h */,
+				0E41A2D61F3B406B00E5BCA9 /* BSVideoView.m */,
+				0E41A2D81F3B407F00E5BCA9 /* BSVideoView.xib */,
 				0EDC09C01F3608C8000EB518 /* BSProgressView.h */,
 				0EDC09C11F3608C8000EB518 /* BSProgressView.m */,
 			);
@@ -519,6 +527,7 @@
 				0E13DC181F0E6C7C00C81D2D /* LaunchScreen.storyboard in Resources */,
 				F46B213A1F298CB100A61C6C /* BSGuideView.xib in Resources */,
 				0E13DC151F0E6C7C00C81D2D /* Assets.xcassets in Resources */,
+				0E41A2D91F3B407F00E5BCA9 /* BSVideoView.xib in Resources */,
 				F430A7461F1DD25D005FD2ED /* BSCategoryCell.xib in Resources */,
 				F4DE0AC71F25BD3B0005F4CC /* BSLoginRegisterController.xib in Resources */,
 				0E2067A11F36BD8400650B08 /* BSPublishViewController.xib in Resources */,
@@ -586,6 +595,7 @@
 			files = (
 				0EDC09C21F3608C8000EB518 /* BSProgressView.m in Sources */,
 				F4EF6A4B1F319D8100730559 /* BSPictureView.m in Sources */,
+				0E41A2D71F3B406B00E5BCA9 /* BSVideoView.m in Sources */,
 				0E13DC0D1F0E6C7C00C81D2D /* AppDelegate.m in Sources */,
 				F430A7451F1DD25D005FD2ED /* BSCategoryCell.m in Sources */,
 				0E2288F91F164FBF007C0D25 /* UIBarButtonItem+BSExtension.m in Sources */,

@@ -64,6 +64,10 @@
 @property (assign, nonatomic) NSInteger playcount;
 //如果为音频类帖子，则返回值为音频的时长
 @property (assign, nonatomic) NSInteger voicetime;
+//视频加载时候的静态显示的图片地址
+@property (copy, nonatomic) NSString *cdn_img;
+//如果含有视频则该参数为视频的长度
+@property (assign, nonatomic) NSInteger videotime;
 
 /****** 辅助属性 ******/
 //cell高度
@@ -73,6 +77,8 @@
 @property (assign, nonatomic) CGRect pictureF;
 //声音的frame
 @property (assign, nonatomic) CGRect voiceF;
+//视频的frame
+@property (assign, nonatomic) CGRect videoF;
 
 //是否是大图
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;

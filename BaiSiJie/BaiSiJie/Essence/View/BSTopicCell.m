@@ -10,6 +10,7 @@
 #import "BSTopicModel.h"
 #import "BSPictureView.h"
 #import "BSVoiceView.h"
+#import "BSVideoView.h"
 #import <UIImageView+WebCache.h>
 
 @interface BSTopicCell ()
@@ -35,6 +36,8 @@
 @property (weak, nonatomic) BSPictureView *pictureView;
 /* 声音帖子*/
 @property (weak, nonatomic) BSVoiceView *voiceView;
+/* 视频帖子*/
+@property (weak, nonatomic) BSVideoView *videoView;
 
 @end
 @implementation BSTopicCell
@@ -51,11 +54,32 @@
     self.contentLabel.text = topic.text;
     
     if (topic.type == BSTopicTypePicture) { //图片帖子
+        //防止cell复用时，页面混乱
+        self.pictureView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
+        
+        //赋值
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
-    } else if (topic.type == BSTopicTypeVoice) {
+    } else if (topic.type == BSTopicTypeVoice) { //声音帖子
+        self.voiceView.hidden = NO;
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+        
         self.voiceView.frame = topic.voiceF;
         self.voiceView.topic = topic;
+    } else if(topic.type == BSTopicTypeVideo) { //视频帖子
+        self.videoView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+        
+        self.videoView.frame = topic.videoF;
+        self.videoView.topic = topic;
+    } else {
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
     }
     
     //对于时间的处理，封装在create_at的get方法里，这里获取到的直接是处理完好的时间样式
@@ -119,6 +143,16 @@
         _voiceView = voiceView;
     }
     return _voiceView;
+}
+
+- (BSVideoView *)videoView
+{
+    if (!_videoView) {
+        BSVideoView *videoView = [BSVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

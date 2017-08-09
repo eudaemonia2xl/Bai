@@ -89,7 +89,7 @@
             CGFloat pictureY = BStopicCellTextY + contentLabelH + BSTopicCellMargin;
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             _cellHeight += pictureH + BSTopicCellMargin;
-        } else if(self.type == BSTopicTypeVoice) {
+        } else if(self.type == BSTopicTypeVoice) { //声音帖子
             CGFloat voiceX = BSTopicCellMargin;
             CGFloat voiceY = BStopicCellTextY + contentLabelH + BSTopicCellMargin;
             CGFloat voiceW = contentLabelW;
@@ -97,6 +97,14 @@
             _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             
             _cellHeight += voiceH + BSTopicCellMargin;
+        } else if (self.type == BSTopicTypeVideo) { //视频帖子
+            CGFloat videoX = BSTopicCellMargin;
+            CGFloat videoY = BStopicCellTextY + contentLabelH + BSTopicCellMargin;
+            CGFloat videoW = contentLabelW;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            _cellHeight += videoH + BSTopicCellMargin;
         }
          _cellHeight += BSTopicCellBottomBarH + BSTopicCellMargin;
     }

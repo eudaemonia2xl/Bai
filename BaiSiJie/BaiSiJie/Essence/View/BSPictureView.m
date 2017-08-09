@@ -29,6 +29,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    self.autoresizingMask = UIViewAutoresizingNone;
 
     self.bgImageView.userInteractionEnabled = YES;
     [self.bgImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pictureTap)]];
@@ -43,7 +44,6 @@
     showPictureVC.topic = self.topic;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPictureVC animated:YES completion:nil];
 }
-
 
 /**
  * 在不知道图片扩展名的情况下, 如何知道图片的真实类型?
