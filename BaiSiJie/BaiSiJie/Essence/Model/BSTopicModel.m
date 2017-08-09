@@ -89,6 +89,14 @@
             CGFloat pictureY = BStopicCellTextY + contentLabelH + BSTopicCellMargin;
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             _cellHeight += pictureH + BSTopicCellMargin;
+        } else if(self.type == BSTopicTypeVoice) {
+            CGFloat voiceX = BSTopicCellMargin;
+            CGFloat voiceY = BStopicCellTextY + contentLabelH + BSTopicCellMargin;
+            CGFloat voiceW = contentLabelW;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            
+            _cellHeight += voiceH + BSTopicCellMargin;
         }
          _cellHeight += BSTopicCellBottomBarH + BSTopicCellMargin;
     }

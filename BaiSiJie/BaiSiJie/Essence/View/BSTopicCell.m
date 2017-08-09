@@ -9,6 +9,7 @@
 #import "BSTopicCell.h"
 #import "BSTopicModel.h"
 #import "BSPictureView.h"
+#import "BSVoiceView.h"
 #import <UIImageView+WebCache.h>
 
 @interface BSTopicCell ()
@@ -30,7 +31,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sineVImageView;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
+/* 图片帖子*/
 @property (weak, nonatomic) BSPictureView *pictureView;
+/* 声音帖子*/
+@property (weak, nonatomic) BSVoiceView *voiceView;
 
 @end
 @implementation BSTopicCell
@@ -49,6 +53,9 @@
     if (topic.type == BSTopicTypePicture) { //图片帖子
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
+    } else if (topic.type == BSTopicTypeVoice) {
+        self.voiceView.frame = topic.voiceF;
+        self.voiceView.topic = topic;
     }
     
     //对于时间的处理，封装在create_at的get方法里，这里获取到的直接是处理完好的时间样式
@@ -102,6 +109,16 @@
         _pictureView = pictureView;
     }
     return _pictureView;
+}
+
+- (BSVoiceView *)voiceView
+{
+    if (!_voiceView) {
+        BSVoiceView *voiceView = [BSVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

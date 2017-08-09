@@ -31,6 +31,8 @@
 		0E27DB0F1F2DD853003C24D8 /* BSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E27DB0D1F2DD853003C24D8 /* BSTopicCell.m */; };
 		0E27DB101F2DD853003C24D8 /* BSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E27DB0E1F2DD853003C24D8 /* BSTopicCell.xib */; };
 		0E287B941F28D31600F3070B /* BSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E287B931F28D31600F3070B /* BSTextField.m */; };
+		0E41A2D21F3B32B600E5BCA9 /* BSVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E41A2D11F3B32B600E5BCA9 /* BSVoiceView.m */; };
+		0E41A2D41F3B32C400E5BCA9 /* BSVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E41A2D31F3B32C400E5BCA9 /* BSVoiceView.xib */; };
 		0EDC09C21F3608C8000EB518 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC09C11F3608C8000EB518 /* BSProgressView.m */; };
 		AA9C683D34C9D5AD809CD681 /* libPods-BaiSiJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 794295E919053EE028329934 /* libPods-BaiSiJie.a */; };
 		F401C7F11F1C653C00AF6FC0 /* BSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F401C7EF1F1C653C00AF6FC0 /* BSFriendTrendsViewController.m */; };
@@ -101,6 +103,9 @@
 		0E27DB0E1F2DD853003C24D8 /* BSTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicCell.xib; sourceTree = "<group>"; };
 		0E287B921F28D31600F3070B /* BSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextField.h; sourceTree = "<group>"; };
 		0E287B931F28D31600F3070B /* BSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextField.m; sourceTree = "<group>"; };
+		0E41A2D01F3B32B600E5BCA9 /* BSVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVoiceView.h; sourceTree = "<group>"; };
+		0E41A2D11F3B32B600E5BCA9 /* BSVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVoiceView.m; sourceTree = "<group>"; };
+		0E41A2D31F3B32C400E5BCA9 /* BSVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSVoiceView.xib; sourceTree = "<group>"; };
 		0EDC09C01F3608C8000EB518 /* BSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSProgressView.h; sourceTree = "<group>"; };
 		0EDC09C11F3608C8000EB518 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
 		794295E919053EE028329934 /* libPods-BaiSiJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +287,9 @@
 				F4EF6A491F319D8100730559 /* BSPictureView.h */,
 				F4EF6A4A1F319D8100730559 /* BSPictureView.m */,
 				F4EF6A4C1F319D9100730559 /* BSPictureView.xib */,
+				0E41A2D01F3B32B600E5BCA9 /* BSVoiceView.h */,
+				0E41A2D11F3B32B600E5BCA9 /* BSVoiceView.m */,
+				0E41A2D31F3B32C400E5BCA9 /* BSVoiceView.xib */,
 				0EDC09C01F3608C8000EB518 /* BSProgressView.h */,
 				0EDC09C11F3608C8000EB518 /* BSProgressView.m */,
 			);
@@ -514,6 +522,7 @@
 				F430A7461F1DD25D005FD2ED /* BSCategoryCell.xib in Resources */,
 				F4DE0AC71F25BD3B0005F4CC /* BSLoginRegisterController.xib in Resources */,
 				0E2067A11F36BD8400650B08 /* BSPublishViewController.xib in Resources */,
+				0E41A2D41F3B32C400E5BCA9 /* BSVoiceView.xib in Resources */,
 				F430A74B1F1DF6BE005FD2ED /* BSUserCell.xib in Resources */,
 				F4EF6A4D1F319D9100730559 /* BSPictureView.xib in Resources */,
 				0E178CCC1F232AE200FC8815 /* BSRecommandTagCell.xib in Resources */,
@@ -601,6 +610,7 @@
 				F46B21381F298C9F00A61C6C /* BSGuideView.m in Sources */,
 				0E1DB6A31F2D77EE00EA31D2 /* BSTopicModel.m in Sources */,
 				0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */,
+				0E41A2D21F3B32B600E5BCA9 /* BSVoiceView.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,
 				0E27DB0F1F2DD853003C24D8 /* BSTopicCell.m in Sources */,

@@ -60,17 +60,25 @@
 //是否是gif动画
 @property (nonatomic, assign) BOOL is_gif;
 
+//播放时长
+@property (assign, nonatomic) NSInteger playcount;
+//如果为音频类帖子，则返回值为音频的时长
+@property (assign, nonatomic) NSInteger voicetime;
+
 /****** 辅助属性 ******/
 //cell高度
 @property (nonatomic, assign) CGFloat cellHeight;
 
 //图片的frame
 @property (assign, nonatomic) CGRect pictureF;
+//声音的frame
+@property (assign, nonatomic) CGRect voiceF;
 
 //是否是大图
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 
 //记录图片的当前进度
 @property (assign, nonatomic) CGFloat pictureProgress;
+
 
 @end
