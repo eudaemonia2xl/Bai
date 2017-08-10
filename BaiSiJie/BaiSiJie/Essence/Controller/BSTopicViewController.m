@@ -87,7 +87,7 @@ static NSString *topicID = @"BSTopicCell";
         if (self.params != params) {
             return ;
         }
-        
+        [responseObject writeToFile:@"/Users/senyint/Desktop/tiezi.plist" atomically:YES ];
         //移除旧数据
         if (self.wordsArray.count != 0) {
             [self.wordsArray removeAllObjects];

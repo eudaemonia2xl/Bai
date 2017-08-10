@@ -111,4 +111,9 @@
     return _cellHeight;
 }
 
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"top_cmt":@"BSComment"};
+}
+
 @end

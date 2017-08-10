@@ -69,6 +69,9 @@
 //如果含有视频则该参数为视频的长度
 @property (assign, nonatomic) NSInteger videotime;
 
+/** 最热评论(期望这个数组中存放的是BSComment模型) */
+@property (nonatomic, strong) NSArray *top_cmt;
+
 /****** 辅助属性 ******/
 //cell高度
 @property (nonatomic, assign) CGFloat cellHeight;

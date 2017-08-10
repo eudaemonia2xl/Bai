@@ -51,6 +51,8 @@
 		F430A74E1F1DFC81005FD2ED /* BSRecommandUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F430A74D1F1DFC81005FD2ED /* BSRecommandUser.m */; };
 		F46B21381F298C9F00A61C6C /* BSGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B21371F298C9F00A61C6C /* BSGuideView.m */; };
 		F46B213A1F298CB100A61C6C /* BSGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46B21391F298CB100A61C6C /* BSGuideView.xib */; };
+		F47524131F3C64D000738522 /* BSComment.m in Sources */ = {isa = PBXBuildFile; fileRef = F47524121F3C64D000738522 /* BSComment.m */; };
+		F47524161F3C64DB00738522 /* BSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F47524151F3C64DB00738522 /* BSUser.m */; };
 		F476E33F1F2EF3ED0000CCD8 /* NSDate+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F476E33E1F2EF3ED0000CCD8 /* NSDate+BSExtension.m */; };
 		F476E3421F2F26D40000CCD8 /* BSTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F476E3411F2F26D40000CCD8 /* BSTopicViewController.m */; };
 		F4DE0AC61F25BD3B0005F4CC /* BSLoginRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DE0AC41F25BD3B0005F4CC /* BSLoginRegisterController.m */; };
@@ -137,6 +139,10 @@
 		F46B21361F298C9F00A61C6C /* BSGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGuideView.h; sourceTree = "<group>"; };
 		F46B21371F298C9F00A61C6C /* BSGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGuideView.m; sourceTree = "<group>"; };
 		F46B21391F298CB100A61C6C /* BSGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSGuideView.xib; sourceTree = "<group>"; };
+		F47524111F3C64D000738522 /* BSComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSComment.h; sourceTree = "<group>"; };
+		F47524121F3C64D000738522 /* BSComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSComment.m; sourceTree = "<group>"; };
+		F47524141F3C64DB00738522 /* BSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUser.h; sourceTree = "<group>"; };
+		F47524151F3C64DB00738522 /* BSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUser.m; sourceTree = "<group>"; };
 		F476E33D1F2EF3ED0000CCD8 /* NSDate+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BSExtension.h"; sourceTree = "<group>"; };
 		F476E33E1F2EF3ED0000CCD8 /* NSDate+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BSExtension.m"; sourceTree = "<group>"; };
 		F476E3401F2F26D40000CCD8 /* BSTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicViewController.h; sourceTree = "<group>"; };
@@ -276,6 +282,10 @@
 				0E178CC61F232A9200FC8815 /* BSRecommandTag.m */,
 				0E1DB6A11F2D77EE00EA31D2 /* BSTopicModel.h */,
 				0E1DB6A21F2D77EE00EA31D2 /* BSTopicModel.m */,
+				F47524111F3C64D000738522 /* BSComment.h */,
+				F47524121F3C64D000738522 /* BSComment.m */,
+				F47524141F3C64DB00738522 /* BSUser.h */,
+				F47524151F3C64DB00738522 /* BSUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -619,11 +629,13 @@
 				F430A74A1F1DF6BE005FD2ED /* BSUserCell.m in Sources */,
 				F46B21381F298C9F00A61C6C /* BSGuideView.m in Sources */,
 				0E1DB6A31F2D77EE00EA31D2 /* BSTopicModel.m in Sources */,
+				F47524131F3C64D000738522 /* BSComment.m in Sources */,
 				0E178CC71F232A9200FC8815 /* BSRecommandTag.m in Sources */,
 				0E41A2D21F3B32B600E5BCA9 /* BSVoiceView.m in Sources */,
 				F401C7F91F1C81A100AF6FC0 /* Foundation+Log.m in Sources */,
 				0E13DC0A1F0E6C7C00C81D2D /* main.m in Sources */,
 				0E27DB0F1F2DD853003C24D8 /* BSTopicCell.m in Sources */,
+				F47524161F3C64DB00738522 /* BSUser.m in Sources */,
 				F401C8031F1CBA4D00AF6FC0 /* BSRecommandCategory.m in Sources */,
 				0E178CCB1F232AE200FC8815 /* BSRecommandTagCell.m in Sources */,
 				0E22890B1F164FD4007C0D25 /* BSMeViewController.m in Sources */,
