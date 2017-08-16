@@ -70,6 +70,7 @@ static NSString *topicID = @"BSTopicCell";
     [self.tableView.mj_footer endRefreshing];
 
     [self.topicViewModel loadNewTopicDataSuccess:^{
+
         //刷新表格
         [self.tableView reloadData];
 
