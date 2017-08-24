@@ -9,23 +9,14 @@
 #import "BSTopicViewController.h"
 #import "BSTopicModel.h"
 #import "BSTopicCell.h"
-#import <AFNetworking.h>
+#import "BSTopicViewModel.h"
 #import <UIImageView+WebCache.h>
-#import <MJExtension.h>
 #import <MJRefresh.h>
 
 @interface BSTopicViewController ()
 
-//数据源数组，放段子数据
-@property (strong, nonatomic) NSMutableArray *wordsArray;
-
-//每次加载下一页的时候，需要传入上一页返回参数中对应的此内容
-@property (copy, nonatomic) NSString *maxtime;
-
-//当前段子页数，用于加载更多数据时使用
-@property (assign, nonatomic) NSInteger currentPage;
-
-@property (strong, nonatomic) NSDictionary *params;
+//viewmodel
+@property (strong, nonatomic) BSTopicViewModel *topicViewModel;
 
 @end
 
@@ -77,41 +68,21 @@ static NSString *topicID = @"BSTopicCell";
 - (void)loadNewData
 {
     [self.tableView.mj_footer endRefreshing];
-    _currentPage = 0;
-    NSDictionary *params = @{@"a":@"list",
-                             @"c":@"data",
-                             @"type":@(self.type)
-                             };
-    self.params = params;
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (self.params != params) {
-            return ;
-        }
-        [responseObject writeToFile:@"/Users/senyint/Desktop/tiezi.plist" atomically:YES ];
-        //移除旧数据
-        if (self.wordsArray.count != 0) {
-            [self.wordsArray removeAllObjects];
-        }
-        
-        //字典 -> 模型数组
-        self.maxtime = responseObject[@"info"][@"maxtime"];
-        NSArray *wordArray = [BSTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
-        //保存到数据源数组中
-        [self.wordsArray addObjectsFromArray:wordArray];
-        
+
+    [self.topicViewModel loadNewTopicDataSuccess:^{
+
         //刷新表格
         [self.tableView reloadData];
-        
+
         //结束加载新的数据
         [self.tableView.mj_header endRefreshing];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (self.params != params) {
-            return ;
-        }
+
+    } failure:^{
         //结束加载新的数据
         [self.tableView.mj_header endRefreshing];
     }];
+    
+    
 }
 
 /**
@@ -120,51 +91,23 @@ static NSString *topicID = @"BSTopicCell";
 - (void)loadMoreData
 {
     [self.tableView.mj_header endRefreshing];
-    _currentPage++;
-    if (self.maxtime == nil) {
-        self.maxtime = @"";
-    }
-    NSDictionary *params = @{@"a":@"list",
-                             @"c":@"data",
-                             @"type":@(self.type),
-                             @"page":@(_currentPage),
-                             @"maxtime":self.maxtime};
-    self.params = params;
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (self.params != params) {
-            return ;
-        }
-        
-        //每次刷新都需要重新存一下maxtime
-        self.maxtime = responseObject[@"info"][@"maxtime"];
-        
-        //字典 -> 模型数组
-        NSArray *wordArray = [BSTopicModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
-        //保存到数据源数组中
-        [self.wordsArray addObjectsFromArray:wordArray];
-        
+    
+    [self.topicViewModel loadMoreTopicDataSuccess:^{
         //刷新表格
         [self.tableView reloadData];
-        
+
         //结束刷新
         [self.tableView.mj_footer endRefreshing];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //如果失败，++之后的currentPage要变回原值
-        _currentPage--;
-        if (self.params != params) {
-            return ;
-        }
+    } failure:^{
         //结束刷新
         [self.tableView.mj_footer endRefreshing];
     }];
-    
 }
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    self.tableView.mj_footer.hidden = (self.wordsArray.count == 0);
-    return self.wordsArray.count;
+    self.tableView.mj_footer.hidden = (self.topicViewModel.wordsArray.count == 0);
+    return self.topicViewModel.wordsArray.count;
 }
 
 
@@ -172,7 +115,7 @@ static NSString *topicID = @"BSTopicCell";
     
     BSTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:topicID forIndexPath:indexPath];
     
-    BSTopicModel *topic = self.wordsArray[indexPath.row];
+    BSTopicModel *topic = self.topicViewModel.wordsArray[indexPath.row];
     
     cell.topic = topic;
     
@@ -182,17 +125,18 @@ static NSString *topicID = @"BSTopicCell";
 #pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BSTopicModel *topic = self.wordsArray[indexPath.row];
+    BSTopicModel *topic = self.topicViewModel.wordsArray[indexPath.row];
     
     return topic.cellHeight;
 }
 
-- (NSMutableArray *)wordsArray
+- (BSTopicViewModel *)topicViewModel
 {
-    if (_wordsArray == nil) {
-        _wordsArray = [NSMutableArray array];
+    if (!_topicViewModel) {
+        _topicViewModel = [[BSTopicViewModel alloc] init];
+        _topicViewModel.type = self.type;
     }
-    return _wordsArray;
+    return _topicViewModel;
 }
 
 - (void)didReceiveMemoryWarning {
